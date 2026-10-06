@@ -29,7 +29,7 @@
     var s = UC.site, page = document.body.dataset.page || '';
     var practicePages = s.practice.map(function (p) { return p.page; });
     var fundPages = s.funds.map(function (f) { return f.page; });
-    var fundsPlus = s.funds.concat([{ name: 'Compare all three', href: 'pms.html#funds', page: 'pms-compare', note: 'Every term side by side, plus the growth calculator.', tag: 'Asset management' }]);
+    var fundsPlus = s.funds.concat([{ name: 'Compare all three', href: 'pms.html#funds', page: 'pms-compare', note: 'Every term side by side.', tag: 'Asset management' }]);
 
     host.outerHTML =
       '<a class="skip" href="#main">Skip to content</a>' +
