@@ -28,9 +28,9 @@ One photograph per place. Replace any of them in **/admin → Photographs** (or 
 | ucwf | `ucwf.jpg` | Chess pieces in a line, the king alone in sharp focus | Asset Management |
 | ucgf | `ucgf.jpg` | A chessboard mid-game, many pieces working together | Asset Management |
 | ucpf | `ucpf.jpg` | The king and queen of a chess set — legacy, held by very few | Asset Management |
-| storiesHero | `stories-hero.jpg` | A lamp-lit private desk | Client stories |
-| storiesExit | `stories-exit.jpg` | Three generations of hands held together | Client stories |
-| storiesSuccession | `stories-succession.jpg` | Grandparents holding their grandchild | Client stories |
+| storiesHero | `stories-hero.jpg` | A father and child watching a quiet sunset together | Client stories |
+| storiesExit | `stories-exit.jpg` | A father and son walking along the shore at sunset — the next chapter, together | Client stories |
+| storiesSuccession | `stories-succession.jpg` | A father’s hand holding his child’s — the bond that carries a family forward | Client stories |
 | storiesNRI | `stories-nri.jpg` | The Dubai skyline, where the client lives | Client stories |
 | storiesPreservation | `stories-preservation.jpg` | A calm sea meeting the shore — staying steady through the storm | Client stories |
 | portraitDurgesh | `durgesh-pandya.jpg` | Durgesh Pandya | Home |

@@ -3,7 +3,7 @@
    file name below and list it in UC.ownPhotos. Interim photos: free-licence Unsplash. */
 window.UC = window.UC || {};
 UC.ownPhotos = [
-  'stories-exit.jpg', 'pms-signature.jpg', 'home-intro.jpg', 'advisory-hero.jpg', 'practice-asset-management.jpg', 'city-vadodara.jpg', 'city-delhi.jpg', 'city-dubai.jpg', 'city-kochi.jpg', 'city-bangalore.jpg'
+  'pms-signature.jpg', 'advisory-hero.jpg', 'practice-asset-management.jpg', 'city-vadodara.jpg', 'city-delhi.jpg', 'city-dubai.jpg', 'city-kochi.jpg', 'city-bangalore.jpg'
 ];
 (function () {
   function u(id) { return 'https://images.unsplash.com/' + id + '?auto=format&fit=crop&q=72'; }
@@ -17,7 +17,7 @@ UC.ownPhotos = [
   UC.images = {
     // Home
     homeHero:           s('home-hero.jpg', 'Mumbai’s high-rises rising in layers beside the water at night', 'photo-1575261755165-1a9d4370c898', '50% 55%'),
-    homeIntro:          s('home-intro.jpg', 'An Indian family of three generations in conversation with their wealth manager', null, '50% 45%'),
+    homeIntro:          s('home-intro-photo.jpg', 'A father and son silhouetted against a golden sunset — the bond a plan is built to protect', ['https://images.pexels.com/photos/29702438/pexels-photo-29702438.jpeg?auto=compress&cs=tinysrgb&w=1600', 'photo-1621176313593-89976c1f1bed'], '50% 55%'),
     practiceAdvisory:   s('practice-advisory.jpg', 'A quiet boardroom set for a private meeting', 'photo-1706074793638-da28b90ea8ae'),
     practiceAM:         s('practice-asset-management.jpg', 'The UpperCrust office, with the bronze bull in a gold-lit display case', 'photo-1706074797611-a02f9ed06439', '50% 55%'),
     practiceInsurance:  s('practice-insurance.jpg', 'A young family holding their baby', 'photo-1657912230172-23f8b31665ed', '50% 30%'),
@@ -46,9 +46,9 @@ UC.ownPhotos = [
     ucgf:               s('ucgf.jpg', 'A chessboard mid-game, many pieces working together', ['https://images.pexels.com/photos/6114957/pexels-photo-6114957.jpeg?auto=compress&cs=tinysrgb&w=2200', 'photo-1486406146926-c627a92ad1ab'], '50% 50%'),
     ucpf:               s('ucpf.jpg', 'The king and queen of a chess set — legacy, held by very few', ['https://images.pexels.com/photos/5502523/pexels-photo-5502523.jpeg?auto=compress&cs=tinysrgb&w=1400', 'photo-1567899378494-47b22a2ae96a'], '50% 50%'),
     // Client stories
-    storiesHero:        s('stories-hero.jpg', 'A lamp-lit private desk', 'photo-1564540574859-0dfb63985953'),
-    storiesExit:        s('stories-exit.jpg', 'Three generations of hands held together', null, '50% 50%'),
-    storiesSuccession:  s('stories-succession.jpg', 'Grandparents holding their grandchild', 'photo-1621176313593-89976c1f1bed', '50% 30%'),
+    storiesHero:        s('stories-hero.jpg', 'A father and child watching a quiet sunset together', ['https://images.pexels.com/photos/31839655/pexels-photo-31839655.jpeg?auto=compress&cs=tinysrgb&w=2200', 'photo-1564540574859-0dfb63985953'], '50% 62%'),
+    storiesExit:        s('stories-exit.jpg', 'A father and son walking along the shore at sunset — the next chapter, together', ['https://images.pexels.com/photos/20464674/pexels-photo-20464674.jpeg?auto=compress&cs=tinysrgb&w=2200', 'photo-1450101499163-c8848c66ca85'], '50% 55%'),
+    storiesSuccession:  s('stories-succession.jpg', 'A father’s hand holding his child’s — the bond that carries a family forward', ['https://images.pexels.com/photos/4005249/pexels-photo-4005249.jpeg?auto=compress&cs=tinysrgb&w=2200', 'photo-1621176313593-89976c1f1bed'], '50% 50%'),
     storiesNRI:         s('stories-nri.jpg', 'The Dubai skyline, where the client lives', 'photo-1512453979798-5ea266f8880c'),
     storiesPreservation: s('stories-preservation.jpg', 'A calm sea meeting the shore — staying steady through the storm', 'photo-1507525428034-b723cf961d3e'),
     // Leadership — initials show until a portrait is added

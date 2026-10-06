@@ -44,7 +44,7 @@ Every save is a Git commit — versioned and reversible.
 2. Each month paste the factsheet rows (fund and benchmark), set `as_of`, set `publish` to `yes` for funds that may be shown.
 3. File → Share → **Publish to web** → the sheet → **CSV** → copy the link.
 4. Paste it into /admin → Contact, event and firm details → **Performance spreadsheet**.
-The record panel, AUM figures and calculator all follow the sheet. If no link is set, `content/performance.csv` is used.
+The record panel and AUM figures follow the sheet. If no link is set, `content/performance.csv` is used.
 
 ## 5. Enquiries
 Netlify → **Forms → Enable form detection**, redeploy once. Letters arrive under Forms → `enquiry`; add an email notification.
@@ -72,7 +72,6 @@ Netlify → **Forms → Enable form detection**, redeploy once. Letters arrive u
 │   │   ├── components/
 │   │   │   ├── blocks.css
 │   │   │   ├── buttons.css
-│   │   │   ├── calculator.css
 │   │   │   ├── cards.css
 │   │   │   ├── faq.css
 │   │   │   ├── footer.css
@@ -96,8 +95,11 @@ Netlify → **Forms → Enable form detection**, redeploy once. Letters arrive u
 │   │   │   ├── soon.css
 │   │   │   └── stories.css
 │   │   └── tokens.css
+│   ├── docs/
+│   │   └── UpperCrust-PMS-Brochure.pdf
 │   ├── fonts/  (7 files)
 │   ├── img/
+│   │   ├── brochure-cover.jpg
 │   │   ├── logo-dark.png
 │   │   ├── logo-light.png
 │   │   └── photos/  (11 files)
@@ -116,7 +118,6 @@ Netlify → **Forms → Enable form detection**, redeploy once. Letters arrive u
 │       ├── main.js
 │       ├── modules/
 │       │   ├── bind.js
-│       │   ├── calculator.js
 │       │   ├── india-map.js
 │       │   ├── inview.js
 │       │   ├── letter-form.js
@@ -131,6 +132,7 @@ Netlify → **Forms → Enable form detection**, redeploy once. Letters arrive u
 │       └── uc.js
 ├── broking.html
 ├── client-stories.html
+├── resources.html
 ├── content/
 │   ├── funds.json
 │   ├── images.json

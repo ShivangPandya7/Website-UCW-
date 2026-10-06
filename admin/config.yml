@@ -117,8 +117,8 @@ collections:
           - {label: "Chess pieces in a line, the king alone in sharp focus", name: "ucwf", widget: image, required: false, hint: "Default file name: ucwf.jpg"}
           - {label: "A chessboard mid-game, many pieces working together", name: "ucgf", widget: image, required: false, hint: "Default file name: ucgf.jpg"}
           - {label: "The king and queen of a chess set — legacy, held by very few", name: "ucpf", widget: image, required: false, hint: "Default file name: ucpf.jpg"}
-          - {label: "A lamp-lit private desk", name: "storiesHero", widget: image, required: false, hint: "Default file name: stories-hero.jpg"}
-          - {label: "Three generations of hands held together", name: "storiesExit", widget: image, required: false, hint: "Default file name: stories-exit.jpg"}
-          - {label: "Grandparents holding their grandchild", name: "storiesSuccession", widget: image, required: false, hint: "Default file name: stories-succession.jpg"}
+          - {label: "A father and child watching a quiet sunset together", name: "storiesHero", widget: image, required: false, hint: "Default file name: stories-hero.jpg"}
+          - {label: "A father and son walking along the shore at sunset — the next chapter, together", name: "storiesExit", widget: image, required: false, hint: "Default file name: stories-exit.jpg"}
+          - {label: "A father’s hand holding his child’s — the bond that carries a family forward", name: "storiesSuccession", widget: image, required: false, hint: "Default file name: stories-succession.jpg"}
           - {label: "The Dubai skyline, where the client lives", name: "storiesNRI", widget: image, required: false, hint: "Default file name: stories-nri.jpg"}
           - {label: "A calm sea meeting the shore — staying steady through the storm", name: "storiesPreservation", widget: image, required: false, hint: "Default file name: stories-preservation.jpg"}

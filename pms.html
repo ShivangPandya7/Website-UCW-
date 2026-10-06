@@ -39,7 +39,7 @@
   <nav class="subnav" data-subnav aria-label="On this page">
     <div class="subnav__in">
       <span class="subnav__t">Asset Management</span>
-      <div class="subnav__links"><a href="#overview">Overview</a><a href="#ucwf">UCWF</a><a href="#ucgf">UCGF</a><a href="#ucpf">UCPF</a><a href="#record">Record</a><a href="#calculator">Calculator</a><a href="#process">Process</a><a href="#insights">Insights</a></div>
+      <div class="subnav__links"><a href="#overview">Overview</a><a href="#ucwf">UCWF</a><a href="#ucgf">UCGF</a><a href="#ucpf">UCPF</a><a href="#record">Record</a><a href="#process">Process</a><a href="#insights">Insights</a></div>
       <a class="btn subnav__cta" href="#contact">Invest</a>
     </div>
   </nav>
@@ -88,47 +88,6 @@
     </div>
   </section>
 
-  <section class="sec" id="calculator">
-    <div class="wrap">
-<div class="page sec-head"><p class="marg">Growth calculator</p><div class="main intro"><h2 class="t-h2">See what disciplined compounding could do.</h2><p class="lede">Projected with each fund’s 3-year return from the latest monthly factsheet. An illustration of compounding, not a forecast — markets do not move in straight lines.</p></div></div>
-      <div class="calc" data-calc>
-        <form>
-          <fieldset><legend>Fund</legend>
-            <div class="choices">
-              <label><input type="radio" name="rate" data-fund="UCWF" value="24.29" data-label="UCWF’s 3-year return of 24.29%" checked><span>UCWF<b><span data-bind="UCWF.returns.y3">24.29</span>%</b></span></label>
-              <label><input type="radio" name="rate" data-fund="UCGF" value="19.02" data-label="UCGF’s 3-year return of 19.02%"><span>UCGF<b><span data-bind="UCGF.returns.y3">19.02</span>%</b></span></label>
-            </div>
-          </fieldset>
-          <label><span class="row"><span>Initial investment</span><output data-show="lumpsum"></output></span>
-            <input type="range" name="lumpsum" min="10000000" max="100000000" step="500000" value="10000000"></label>
-          <label><span class="row"><span>Annual top-up</span><output data-show="topup"></output></span>
-            <input type="range" name="topup" min="0" max="10000000" step="100000" value="1000000"></label>
-          <label><span class="row"><span>Horizon</span><output data-show="years"></output></span>
-            <input type="range" name="years" min="1" max="15" step="1" value="10"></label>
-        </form>
-        <div class="calc__out" aria-live="polite">
-          <p class="calc__value" data-out="value">₹0</p>
-          <p class="calc__basis" data-out="basis"></p>
-          <div class="calc__chart" data-out="chart"></div>
-          <div class="calc__legend"><span><i style="background:rgba(145,106,46,.35)"></i>Projected value</span><span><i style="background:rgba(33,29,24,.2)"></i>Capital invested</span></div>
-          <dl class="calc__split"><div><dt>Total invested</dt><dd data-out="invested">₹0</dd></div><div><dt>Wealth gained</dt><dd data-out="gain">₹0</dd></div></dl>
-        </div>
-        <p class="calc__note">Based on each fund’s 3-year return in the latest monthly factsheet. Past performance is not indicative of future returns; actual returns will vary with market conditions. For illustration only; not investment advice.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec sec--dark" aria-labelledby="phil-title">
-    <div class="wrap">
-      <h2 class="lead-h" id="phil-title"><b>Conviction, sized correctly.</b> Nothing more.</h2>
-      <div class="triptych">
-        <article class="tcard tcard--fig"><span class="tcard__big">01</span><div><span class="ccard__eyebrow">Bottom-up</span><h3>Business first</h3><p>We underwrite businesses, not sectors. A position exists because we understand how the company makes money for the next decade.</p></div></article>
-        <article class="tcard tcard--fig"><span class="tcard__big">Few</span><div><span class="ccard__eyebrow">Concentrated</span><h3>Fewer, larger bets</h3><p>Concentrated portfolios. Diversification for its own sake dilutes conviction — and returns.</p></div></article>
-        <article class="tcard tcard--fig"><span class="tcard__big">Years</span><div><span class="ccard__eyebrow">Patient</span><h3>Multi-year holding</h3><p>Positions are sized to be held through volatility, not traded around it.</p></div></article>
-      </div>
-    </div>
-  </section>
-
   <section class="sec crail-sec sec--deep">
     <div class="wrap crail-head"><h2 class="lead-h"><b>Why PMS with UpperCrust.</b> A relationship, not a pooled product.</h2><div class="rail-nav"><button type="button" data-rail-prev aria-label="Previous">‹</button><button type="button" data-rail-next aria-label="Next">›</button></div></div>
     <div class="rail drail" data-rail tabindex="0"><article class="dtile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><p>Fees agreed upfront — <em>never bundled, never hidden.</em></p></article><article class="dtile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg><p>Every transaction <em>visible to you, as it happens.</em></p></article><article class="dtile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.2-3.6 4-5.4 7.5-5.4s6.3 1.8 7.5 5.4"/></svg><p>One named portfolio manager, <em>accountable for your account.</em></p></article><article class="dtile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 16l4-5 3 3 5-7"/><circle cx="18" cy="7" r="1.2"/></svg><p>Every holding re-underwritten <em>each quarter against its thesis.</em></p></article><article class="dtile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 16l4-5 3 3 5-7"/><circle cx="18" cy="7" r="1.2"/></svg><p>Benchmarked openly — <em>every return shown against its index.</em></p></article></div>
@@ -142,7 +101,7 @@
 
   <section class="sec sec--deep">
     <div class="wrap">
-<div class="page sec-head"><p class="marg">The desk</p><div class="main intro"><h2 class="t-h2">The people behind these three funds.</h2><p class="lede">The research and operations team behind the three strategies.</p></div></div><div class="page"><div class="main--wide"><div class="people" style="--cols:2"><div class="person"><span class="person__name">Dhruv Pawashe</span><span class="person__role">Equity Research Analyst</span><p>Underwrites every position across UCWF, UCGF and UCPF before it enters a portfolio, and maintains ongoing coverage.</p></div><div class="person"><span class="person__name">Bijal Mehta</span><span class="person__role">Trade Operations</span><p>Manages trade execution, settlement and NAV operations across all three mandates.</p></div></div></div></div>
+<div class="page sec-head"><p class="marg">The desk</p><div class="main intro"><h2 class="t-h2">The people behind these three funds.</h2><p class="lede">The fund manager, research and operations team behind the three strategies.</p></div></div><div class="page"><div class="main--wide"><ul class="team"><li class="tm"><span class="tm__mono" aria-hidden="true">DP</span><span class="tm__name">Dhruv Pawashe</span><span class="tm__role">Fund Manager</span></li><li class="tm"><span class="tm__mono" aria-hidden="true">BM</span><span class="tm__name">Bijal Mehta</span><span class="tm__role">Trade Operations</span></li><li class="tm"><span class="tm__mono" aria-hidden="true">SP</span><span class="tm__name">Shivang Pandya</span><span class="tm__role">Research Analyst</span></li><li class="tm"><span class="tm__mono" aria-hidden="true">DD</span><span class="tm__name">Debeshee Dey</span><span class="tm__role">Research Analyst</span></li></ul></div></div>
     </div>
   </section>
 
@@ -197,7 +156,6 @@
 <script defer src="assets/js/components/footer.js"></script>
 <script defer src="assets/js/components/contact.js"></script>
 <script defer src="assets/js/components/insights.js"></script>
-<script defer src="assets/js/modules/calculator.js"></script>
 <script defer src="assets/js/modules/rail.js"></script>
 <script defer src="assets/js/modules/record.js"></script>
 <script defer src="assets/js/modules/subnav.js"></script>

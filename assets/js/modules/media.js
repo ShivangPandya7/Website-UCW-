@@ -15,7 +15,8 @@
     var d = UC.images && UC.images[el.dataset.img];
     if (!d) { el.classList.add('is-missing'); return; }
     var w = parseInt(el.dataset.w || '1200', 10);
-    var own = d.own || (UC.ownPhotos || []).indexOf(d.file || d.src.split('/').pop()) > -1;
+    // photos shipped in assets/img/photos are always tried first; a missing file simply falls through to the backup
+    var own = true;
     var img = new Image(), tried = [own ? d.src : null].concat(d.fallbacks && d.fallbacks.length ? d.fallbacks : [d.fallback]).filter(Boolean), i = 0;
     if (!tried.length) { el.classList.add('is-missing'); return; }
     img.alt = el.dataset.alt != null ? el.dataset.alt : d.alt;

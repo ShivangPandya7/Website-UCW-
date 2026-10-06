@@ -57,6 +57,7 @@
           eventLink(s.event) +
           '<a class="nav-link" href="client-stories.html"' + (page === 'stories' ? ' aria-current="page"' : '') + '>Client stories</a>' +
           '<a class="nav-link" href="pms.html#insights">Insights</a>' +
+          '<a class="nav-link" href="resources.html"' + (page === 'resources' ? ' aria-current="page"' : '') + '>Resources</a>' +
         '</nav>' +
         '<a class="btn site-header__cta" href="#contact">Private enquiry</a>' +
         '<button class="site-header__toggle" aria-expanded="false" aria-controls="siteMenu"><span class="label">Menu</span><span class="bars" aria-hidden="true"></span></button>' +
@@ -64,7 +65,7 @@
       '<div class="menu" id="siteMenu" aria-label="Site menu">' +
         '<div class="menu__group"><p class="menu__label">The practice</p>' + menuLinks(s.practice) + '</div>' +
         '<div class="menu__group"><p class="menu__label">Our funds</p>' + menuLinks(s.funds) + '</div>' +
-        '<div class="menu__group"><a href="' + s.event.url + '" target="_blank" rel="noopener">' + s.event.name + ' <small>' + s.event.dateLabel + '</small></a><a href="client-stories.html">Client stories</a><a href="pms.html#insights">Insights</a><a href="#contact">Private enquiry</a></div>' +
+        '<div class="menu__group"><a href="' + s.event.url + '" target="_blank" rel="noopener">' + s.event.name + ' <small>' + s.event.dateLabel + '</small></a><a href="client-stories.html">Client stories</a><a href="pms.html#insights">Insights</a><a href="resources.html">Resources</a><a href="#contact">Private enquiry</a></div>' +
         '<div class="menu__foot"><a href="tel:' + s.contact.tel + '">' + s.contact.phone + '</a><a href="mailto:' + s.contact.email + '">' + s.contact.email + '</a></div>' +
       '</div>';
   }

@@ -8,3 +8,12 @@
 .sec--dark .person__role{color:var(--gold-hair)}
 @media (max-width:900px){.people{grid-template-columns:1fr}}
 .sec--dark .person p{color:var(--on-dark-muted)}
+
+/* Team roster — monogram, name, role */
+.team{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.tm{display:grid;grid-template-columns:52px 1fr;grid-template-rows:auto auto;column-gap:16px;align-items:center;padding:18px 20px;border-radius:16px;background:#FBF7EE;border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.tm:hover{transform:translateY(-3px);box-shadow:0 24px 44px -30px rgba(33,29,24,.45)}
+.tm__mono{grid-row:1 / span 2;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(150deg,#E9D3A0,#C7A868);color:var(--ink);font-family:var(--f-display);font-size:19px;letter-spacing:.02em}
+.tm__name{font-family:var(--f-display);font-size:22px;line-height:1.15;align-self:end}
+.tm__role{font-family:var(--f-ui);font-size:12.5px;letter-spacing:.03em;color:var(--gold-deep);align-self:start;margin-top:3px}
+.sec--deep .tm{background:var(--ivory-light)}
