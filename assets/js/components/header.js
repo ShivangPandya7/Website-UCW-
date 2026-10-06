@@ -136,5 +136,24 @@
     UC.$$('a', menu).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
   }
 
-  UC.register('header', '[data-component="header"]', function (host) { render(host); behave(); });
+
+  // Floating page switcher (bottom of every page). The × folds it down to a single button.
+  function pageBar() {
+    if (document.querySelector('.pagebar')) return;
+    var page = document.body.dataset.page || '';
+    var items = [['Home', 'index.html', 'home'], ['Wealth Advisory', 'wealth-advisory.html', 'advisory'], ['Asset Management', 'pms.html', 'pms'],
+      ['Client stories', 'client-stories.html', 'stories'], ['Resources', 'resources.html', 'resources'], ['Insurance', 'insurance.html', 'insurance'], ['Broking', 'broking.html', 'broking']];
+    var nav = document.createElement('nav');
+    nav.className = 'pagebar'; nav.setAttribute('aria-label', 'Pages');
+    nav.innerHTML = '<b>EXPLORE</b>' + items.map(function (i) {
+      return '<a href="' + i[1] + '"' + (i[2] === page ? ' class="on" aria-current="page"' : '') + '>' + i[0] + '</a>';
+    }).join('') + '<button type="button" class="pagebar__hide" aria-label="Hide page tabs" title="Hide page tabs">\u00d7</button>';
+    document.body.appendChild(nav); document.body.classList.add('has-pagebar');
+    var btn = nav.querySelector('button'), min = false;
+    try { min = sessionStorage.getItem('ucBarMin') === '1'; } catch (e) {}
+    function apply() { nav.classList.toggle('is-min', min); btn.textContent = min ? '\u2630' : '\u00d7'; btn.setAttribute('aria-label', min ? 'Show page tabs' : 'Hide page tabs'); }
+    btn.addEventListener('click', function () { min = !min; try { sessionStorage.setItem('ucBarMin', min ? '1' : '0'); } catch (e) {} apply(); });
+    apply();
+  }
+  UC.register('header', '[data-component="header"]', function (host) { render(host); behave(); pageBar(); });
 })();

@@ -54,7 +54,7 @@ collections:
               - {label: "Name", name: name, widget: string, required: false}
               - {label: "Email", name: email, widget: string, required: false}
               - {label: "Phone", name: phone, widget: string, required: false}
-          - {label: "Enquiry handling", name: formEndpoint, widget: select, options: ["netlify"], default: "netlify", hint: "netlify = enquiries arrive in the Netlify dashboard and by email"}
+          - {label: "Enquiry handling", name: formEndpoint, widget: select, options: [{label: "Email to yash@uppercrustwealth.com", value: "https://formsubmit.co/ajax/yash@uppercrustwealth.com"}, {label: "Netlify Forms (Netlify hosting only)", value: "netlify"}], default: "https://formsubmit.co/ajax/yash@uppercrustwealth.com", hint: "Where the enquiry letter goes. Email sends it straight to Yash's inbox; Netlify Forms only works when the site is hosted on Netlify."}
 
       - label: "Insights (research notes)"
         name: insights

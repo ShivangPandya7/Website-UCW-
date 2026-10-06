@@ -1,0 +1,12 @@
+/* Floating page switcher — the same bar as the v42 preview, now on the live site */
+.pagebar{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:90;display:flex;gap:4px;align-items:center;padding:6px;border-radius:40px;background:rgba(33,29,24,.86);border:1px solid rgba(199,168,104,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);max-width:calc(100vw - 24px);overflow-x:auto;scrollbar-width:none;box-shadow:0 20px 50px -20px rgba(0,0,0,.6);font-family:var(--f-ui)}
+.pagebar::-webkit-scrollbar{display:none}
+.pagebar b{color:#C7A868;font-weight:400;font-size:12px;letter-spacing:.08em;padding:0 10px 0 12px;white-space:nowrap}
+.pagebar a,.pagebar button{font:inherit;font-size:13px;letter-spacing:.02em;color:rgba(242,232,211,.75);background:none;border:0;padding:9px 14px;border-radius:30px;cursor:pointer;white-space:nowrap;text-decoration:none;transition:color .3s,background .3s}
+.pagebar a:hover{color:#F2E8D3}
+.pagebar a.on{background:#F2E8D3;color:#211D18}
+.pagebar .pagebar__hide{color:#C7A868;font-size:16px;padding:6px 10px}
+.pagebar.is-min a,.pagebar.is-min b{display:none}
+body.has-pagebar .site-footer{padding-bottom:96px}
+body.menu-open .pagebar{display:none}
+@media print{.pagebar{display:none}}

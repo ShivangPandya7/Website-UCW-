@@ -47,7 +47,12 @@ Every save is a Git commit — versioned and reversible.
 The record panel and AUM figures follow the sheet. If no link is set, `content/performance.csv` is used.
 
 ## 5. Enquiries
-Netlify → **Forms → Enable form detection**, redeploy once. Letters arrive under Forms → `enquiry`; add an email notification.
+The enquiry letter is emailed to **yash@uppercrustwealth.com** through the FormSubmit relay (set in
+`content/site.json` → `formEndpoint`, and editable in /admin → Contact, event and firm details).
+**One-time step:** after the site is live, send one test letter from any page. FormSubmit emails Yash a
+confirmation link; clicking it activates delivery. Until then, letters are held, not lost.
+If a send fails, the visitor is offered their own email app with the letter already written.
+To use Netlify Forms instead, set the enquiry handling to "Netlify Forms" (works only on Netlify hosting).
 
 ## Before launch — please confirm
 - PMS wording approved by compliance (footer and disclosure name Moat Financial Services Pvt. Ltd., SEBI PMS Reg. No. INP000004482).
