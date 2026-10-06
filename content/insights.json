@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "kind": "Quarterly letter",
+      "title": "Where we are in the capex cycle, and why it matters",
+      "summary": "Our view on India’s private capex revival and what it means for portfolio construction over the next three years.",
+      "readTime": "8 min read",
+      "image": "insightCapex",
+      "file": ""
+    },
+    {
+      "kind": "Sector report",
+      "title": "Defence and precision manufacturing: the self-reliance premium",
+      "summary": "A structural read on India’s defence indigenisation and the companies positioned to compound through it.",
+      "readTime": "12 min read",
+      "image": "insightDefence",
+      "file": ""
+    },
+    {
+      "kind": "Market outlook",
+      "title": "Rates, currency, and the case for staying disciplined",
+      "summary": "Why we continue to underwrite quality over momentum as global rate expectations shift.",
+      "readTime": "6 min read",
+      "image": "insightRates",
+      "file": ""
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+/* Principles — short ideas set side by side under a hairline, like columns of a printed page */
+.principles{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));column-gap:var(--gutter);row-gap:44px}
+.principles > div{border-top:1px solid var(--line-strong);padding-top:22px}
+.principles h3{font-family:var(--f-text);font-style:italic;font-size:var(--t-h4);line-height:1.3;margin-bottom:12px}
+.principles p{font-size:16.5px;line-height:1.7;color:var(--ink-soft)}
+.sec--dark .principles > div{border-color:var(--line-dark)}
+.sec--dark .principles h3{color:var(--ivory)}
+@media (max-width:900px){.principles{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.principles{grid-template-columns:1fr}}
+.sec--dark .principles p{color:var(--on-dark-muted)}

@@ -1,0 +1,31 @@
+/* Layout primitives: the "book page" — a margin column for side notes, a text block for content. */
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+
+.sec{padding-block:var(--sec-y);position:relative}
+.sec--tight{padding-block:clamp(72px,9vw,128px)}
+.sec--deep{background:var(--ivory-deep)}
+.sec--light{background:var(--ivory-light)}
+.sec--dark{background:var(--ink);color:var(--on-dark)}
+.sec--dark .t-lede,.sec--dark p{color:var(--on-dark-muted)}
+.sec--dark .t-small{color:var(--on-dark-muted)}
+
+.page{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:clamp(28px,4vw,48px)}
+.page > .marg{grid-column:1 / span 3}
+.page > .main{grid-column:4 / span 8}
+.page > .main--wide{grid-column:4 / -1}
+.page > .full{grid-column:1 / -1}
+
+/* Side note — the section's name, set like a book's marginalia */
+.marg{font-family:var(--f-text);font-style:italic;font-size:17px;line-height:1.5;color:var(--gold-deep);padding-top:.7em;position:relative}
+.marg::before{content:"";display:block;width:28px;height:1px;background:currentColor;margin-bottom:14px;opacity:.6}
+.sec--dark .marg{color:var(--gold-hair)}
+
+.stack > * + *{margin-top:var(--stack,1.2em)}
+
+.rule{height:1px;background:var(--line);border:0}
+.sec--dark .rule{background:var(--line-dark)}
+
+@media (max-width:900px){
+  .page > .marg,.page > .main,.page > .main--wide{grid-column:1 / -1}
+  .marg{padding-top:0}
+}

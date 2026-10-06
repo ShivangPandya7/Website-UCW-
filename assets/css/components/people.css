@@ -1,0 +1,10 @@
+/* People — set as nameplates, not avatar cards */
+.people{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));column-gap:var(--gutter);row-gap:56px}
+.person{border-top:1px solid var(--line-strong);padding-top:26px;display:flex;flex-direction:column;gap:10px}
+.person__name{font-family:var(--f-display);font-size:clamp(30px,3.2vw,44px);line-height:1.05}
+.person__role{font-family:var(--f-ui);font-size:13.5px;letter-spacing:.04em;color:var(--gold-deep)}
+.person p{font-size:16.5px;line-height:1.7;color:var(--ink-soft);margin-top:8px}
+.sec--dark .person{border-color:var(--line-dark)}
+.sec--dark .person__role{color:var(--gold-hair)}
+@media (max-width:900px){.people{grid-template-columns:1fr}}
+.sec--dark .person p{color:var(--on-dark-muted)}

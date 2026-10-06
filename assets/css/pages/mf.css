@@ -1,0 +1,35 @@
+/* Mutual fund advisory page */
+.goals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gutter);row-gap:48px;border-top:1px solid var(--line-strong);padding-top:30px}
+.goal{display:flex;flex-direction:column;gap:12px}
+.goal__mark{width:100%;max-width:180px;height:48px;margin-bottom:10px;overflow:visible}
+.goal h3{font-family:var(--f-display);font-size:var(--t-h3);line-height:1.1}
+.goal p{font-size:16.5px;line-height:1.7;color:var(--ink-soft)}
+.goal__h{margin-top:auto;padding-top:12px;font-family:var(--f-text);font-style:italic;font-size:16px;color:var(--gold-deep)}
+@media (max-width:900px){.goals{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.goals{grid-template-columns:1fr}}
+
+.flow svg{width:100%;height:auto;overflow:visible}
+.flow text{font-family:var(--f-ui);font-size:14px;letter-spacing:.03em;fill:var(--ink-muted)}
+.flow__vessel{fill:none;stroke:var(--ink);stroke-width:1.2}
+.flow__level{fill:rgba(145,106,46,.22)}
+.flow__in rect{fill:var(--gold)}
+.flow__out rect{fill:var(--gold-hair)}
+
+  .flow__in rect{animation:flowIn 1.6s linear infinite}
+  .flow__out rect{animation:flowOut 2.4s linear infinite}
+  .flow__level{animation:level 6.4s var(--ease-io) infinite alternate;transform-box:fill-box;transform-origin:bottom
+}
+@keyframes flowIn{from{transform:translateX(0)}to{transform:translateX(36px)}}
+@keyframes flowOut{from{transform:translateX(0)}to{transform:translateX(36px)}}
+@keyframes level{from{transform:scaleY(.55)}to{transform:scaleY(1)}}
+.goal__mark path,.goal__mark rect{fill:none;stroke:var(--gold);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.goal__mark circle{fill:var(--gold)}
+.goal__mark rect{fill:rgba(145,106,46,.15)}
+.goal__mark text{font-family:var(--f-ui);font-size:10px;fill:var(--gold-deep)}
+/* The SIP/SWP flow is the point of this section, so it keeps moving even where devices ask for reduced motion (it is slow and never flashes) */
+@media (prefers-reduced-motion:reduce){
+  .flow__in rect{animation-duration:1.6s!important;animation-iteration-count:infinite!important}
+  .flow__out rect{animation-duration:2.4s!important;animation-iteration-count:infinite!important}
+  .flow__level{animation-duration:6.4s!important;animation-iteration-count:infinite!important}
+}
+.flow:hover .flow__in rect,.flow:hover .flow__out rect{animation-play-state:paused}

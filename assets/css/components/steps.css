@@ -1,0 +1,23 @@
+/* Steps — only for content that really is a sequence. A hairline draws across as it enters view. */
+.steps{position:relative;display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));column-gap:var(--gutter);row-gap:40px;padding-top:44px}
+.steps::before,.steps::after{content:"";position:absolute;left:0;right:0;top:7px;height:1px;background:var(--line)}
+.steps::after{background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 2.2s var(--ease)}
+.steps.is-in::after{transform:scaleX(1)}
+.step{position:relative}
+.step::before{content:"";position:absolute;top:-44px;left:0;width:15px;height:15px;border-radius:50%;background:var(--ivory);border:1px solid var(--gold);transition:background .6s var(--ease) calc(var(--i,0) * .45s)}
+.steps.is-in .step::before{background:var(--gold)}
+.sec--deep .step::before{background:var(--ivory-deep)}
+.sec--deep .steps.is-in .step::before{background:var(--gold)}
+.step__n{font-family:var(--f-display);font-style:italic;font-size:20px;color:var(--gold-deep);display:block;margin-bottom:6px}
+.step h3{font-family:var(--f-display);font-size:var(--t-h3);margin-bottom:12px}
+.step p{font-size:16.5px;line-height:1.7;color:var(--ink-soft)}
+.sec--dark .steps::before{background:var(--line-dark)}
+.sec--dark .step::before{background:var(--ink)}
+.sec--dark .step__n{color:var(--gold-hair)}
+@media (max-width:900px){
+  .steps{grid-template-columns:1fr;padding-top:0;padding-left:40px}
+  .steps::before,.steps::after{top:0;bottom:0;left:7px;right:auto;width:1px;height:auto}
+  .steps::after{transform:scaleY(0);transform-origin:top}
+  .steps.is-in::after{transform:scaleY(1)}
+  .step::before{top:6px;left:-40px}
+}

@@ -1,0 +1,36 @@
+/* Shared inner-page blocks */
+.intro h2{font-size:var(--t-h2);max-width:20ch}
+.intro > p,.intro .lede{margin-top:28px;font-size:var(--t-lede);line-height:1.65;color:var(--ink-soft);max-width:56ch}
+.sec--dark .intro .lede{color:var(--on-dark-muted)}
+.sec-head{margin-bottom:clamp(44px,5vw,80px)}
+
+/* Large statement on dark — used for "In your name. Not ours." */
+.vow{font-family:var(--f-display);font-size:clamp(56px,10vw,160px);line-height:.92;letter-spacing:-.025em}
+.vow span{display:block;color:var(--gold-hair)}
+
+/* Signals — situations a reader may recognise. Not a sequence, so set as quotations. */
+.signals{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));column-gap:var(--gutter);row-gap:44px}
+.signal{border-left:1px solid var(--gold-hair);padding-left:22px}
+.signal h3{font-family:var(--f-display);font-size:clamp(24px,2.3vw,32px);line-height:1.15;margin-bottom:12px}
+.signal p{font-size:16.5px;line-height:1.7;color:var(--ink-soft)}
+.sec--dark .signal p{color:var(--on-dark-muted)}
+@media (max-width:900px){.signals{grid-template-columns:1fr}}
+
+/* Compare — the other mandates, set as a footnote-like row */
+.compare{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line-strong)}
+.compare a{display:flex;flex-direction:column;gap:10px;padding:26px 26px 30px 0;border-right:1px solid var(--line-strong);transition:background .5s var(--ease)}
+.compare a + a{padding-left:26px}
+.compare a:last-child{border-right:0}
+.compare a:hover{background:var(--ivory-light)}
+.compare .kind{font-family:var(--f-ui);font-size:13px;letter-spacing:.04em;color:var(--gold-deep)}
+.compare b{font-family:var(--f-display);font-weight:400;font-size:clamp(24px,2.3vw,32px);line-height:1.15}
+.compare span:last-child{font-size:16px;line-height:1.65;color:var(--ink-soft)}
+@media (max-width:900px){.compare{grid-template-columns:1fr}.compare a,.compare a + a{padding:24px 0;border-right:0;border-bottom:1px solid var(--line-strong)}}
+
+/* Disclosure */
+.disclosure{font-family:var(--f-ui);font-size:13.5px;line-height:1.8;letter-spacing:.01em;color:var(--ink-muted);columns:2;column-gap:var(--gutter)}
+.disclosure p{margin-bottom:1em;break-inside:avoid}
+@media (max-width:760px){.disclosure{columns:1}}
+.sec--dark .vow{color:var(--ivory)}
+.sec--dark .vow span{color:var(--gold-hair)}
+.sec--dark .signal h3{color:var(--ivory)}

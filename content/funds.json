@@ -1,0 +1,88 @@
+{
+  "asOf": "30 Jun 2026",
+  "UCWF": {
+    "inception": "20 Jan 2022",
+    "cagr": 15.45,
+    "cagr3y": 23.61,
+    "nav": [
+      {
+        "label": "Inception",
+        "year": "Jan 2022",
+        "value": 100
+      },
+      {
+        "label": "CY 2022",
+        "year": "2022",
+        "value": 87.5,
+        "ret": -12.5
+      },
+      {
+        "label": "CY 2023",
+        "year": "2023",
+        "value": 122.87,
+        "ret": 40.42
+      },
+      {
+        "label": "CY 2024",
+        "year": "2024",
+        "value": 173.73,
+        "ret": 40.55
+      },
+      {
+        "label": "CY 2025",
+        "year": "2025",
+        "value": 178.26,
+        "ret": 1.99
+      },
+      {
+        "label": "CY 2026 YTD",
+        "year": "Jun 2026",
+        "value": 189.38,
+        "ret": 6.3
+      }
+    ]
+  },
+  "UCGF": {
+    "inception": "30 Mar 2022",
+    "cagr": 16.43,
+    "cagr3y": 19.89,
+    "rolling": 90.2,
+    "nav": [
+      {
+        "label": "Inception",
+        "year": "Mar 2022",
+        "value": 100
+      },
+      {
+        "label": "CY 2022",
+        "year": "2022",
+        "value": 101.03,
+        "ret": 1.03
+      },
+      {
+        "label": "CY 2023",
+        "year": "2023",
+        "value": 136.02,
+        "ret": 34.63
+      },
+      {
+        "label": "CY 2024",
+        "year": "2024",
+        "value": 173.43,
+        "ret": 27.5
+      },
+      {
+        "label": "CY 2025",
+        "year": "2025",
+        "value": 185.27,
+        "ret": 6.83
+      },
+      {
+        "label": "CY 2026 YTD",
+        "year": "Jun 2026",
+        "value": 189.42,
+        "ret": 2.24
+      }
+    ]
+  }
+}

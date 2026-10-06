@@ -1,0 +1,47 @@
+/* UpperCrust — design tokens. Brand colours unchanged: ivory, gold, ink. */
+:root{
+  /* Colour */
+  --ivory:#F2E8D3;
+  --ivory-light:#F7F0E2;
+  --ivory-deep:#E8D9B4;
+  --gold:#916A2E;
+  --gold-bright:#AD7F35;
+  --gold-hair:#C7A868;
+  --gold-deep:#7A5624;
+  --ink:#211D18;
+  --ink-raised:#2A251F;
+  --ink-soft:#3A342B;
+  --ink-muted:#655C4D;
+
+  --line:rgba(33,29,24,.14);
+  --line-strong:rgba(33,29,24,.30);
+  --on-dark:#F2E8D3;
+  --on-dark-muted:rgba(242,232,211,.66);
+  --line-dark:rgba(199,168,104,.22);
+
+  /* Type */
+  --f-display:'Libre Caslon Display','Libre Caslon Text',Georgia,'Times New Roman',serif;
+  --f-text:'Libre Caslon Text',Georgia,'Times New Roman',serif;
+  --f-ui:'Jost','Futura','Century Gothic','Avenir Next',Arial,sans-serif;
+
+  /* Scale — perfect fourth (1.333) anchored at 18px */
+  --t-xs:13px;
+  --t-ui:14.5px;
+  --t-body:18px;
+  --t-lede:clamp(19px,1.6vw,22px);
+  --t-h4:clamp(22px,2vw,26px);
+  --t-h3:clamp(26px,2.6vw,34px);
+  --t-h2:clamp(34px,4.2vw,58px);
+  --t-h1:clamp(46px,7vw,104px);
+  --t-hero:clamp(54px,9.4vw,148px);
+
+  /* Space & layout */
+  --gutter:clamp(20px,4vw,56px);
+  --max:1360px;
+  --sec-y:clamp(80px,9vw,140px);
+  --header-h:76px;
+
+  /* Motion */
+  --ease:cubic-bezier(.2,.7,.1,1);
+  --ease-io:cubic-bezier(.65,0,.35,1);
+}

@@ -1,0 +1,45 @@
+/* Photography — one colour grade across all imagery so mixed sources read as one shoot. */
+.ph{position:relative;overflow:hidden;background:var(--ink-raised);isolation:isolate}
+.ph img{position:absolute;inset:0;width:100%;height:calc(100% + 60px);top:-30px;object-fit:cover;
+  transform:translateY(var(--py,0)) scale(1.02);opacity:0;
+  filter:saturate(.72) sepia(.18) contrast(1.04) brightness(.94);
+  transition:opacity 1.2s var(--ease),transform .9s var(--ease),filter .8s var(--ease)}
+.ph.is-loaded img{opacity:1}
+.ph::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(33,29,24,0) 45%,rgba(33,29,24,.38));mix-blend-mode:multiply}
+.ph--clean::after{display:none}
+/* fallback: a branded surface, never a broken image */
+.ph.is-missing{background:
+  repeating-linear-gradient(0deg,rgba(199,168,104,.16) 0 1px,transparent 1px 14px),
+  linear-gradient(160deg,#2A251F,#211D18)}
+.ph.is-missing::before{content:"UpperCrust";position:absolute;left:20px;bottom:16px;font-family:var(--f-display);font-size:22px;color:rgba(199,168,104,.5)}
+
+/* Signature crop — a stepped corner, like the descending tiers of a stepwell */
+.ph--step{clip-path:polygon(0 0,calc(100% - 96px) 0,calc(100% - 96px) 32px,calc(100% - 64px) 32px,calc(100% - 64px) 64px,calc(100% - 32px) 64px,calc(100% - 32px) 96px,100% 96px,100% 100%,0 100%)}
+.ph--step-l{clip-path:polygon(0 96px,32px 96px,32px 64px,64px 64px,64px 32px,96px 32px,96px 0,100% 0,100% 100%,0 100%)}
+@media (max-width:600px){
+  .ph--step{clip-path:polygon(0 0,calc(100% - 60px) 0,calc(100% - 60px) 20px,calc(100% - 40px) 20px,calc(100% - 40px) 40px,calc(100% - 20px) 40px,calc(100% - 20px) 60px,100% 60px,100% 100%,0 100%)}
+  .ph--step-l{clip-path:polygon(0 60px,20px 60px,20px 40px,40px 40px,40px 20px,60px 20px,60px 0,100% 0,100% 100%,0 100%)}
+}
+
+/* Hover zoom on linked imagery */
+a:hover .ph img,a:focus-visible .ph img{transform:translateY(var(--py,0)) scale(1.06);filter:saturate(.85) sepia(.12) contrast(1.05) brightness(.98)}
+
+/* Stickers — small badges for minimums, status and dates */
+.sticker{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-ui);font-size:11.5px;letter-spacing:.06em;line-height:1;padding:6px 10px;border-radius:30px;background:var(--gold-hair);color:var(--ink);white-space:nowrap}
+.sticker--dark{background:var(--ink);color:var(--ivory)}
+.sticker--line{background:transparent;border:1px solid currentColor;color:var(--gold-hair)}
+.sticker--glass{background:rgba(242,232,211,.16);color:var(--ivory);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(242,232,211,.22)}
+.sticker i{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.8}
+
+/* Full-bleed photographic band with caption */
+.band{position:relative;height:clamp(380px,62vh,640px)}
+.band .ph{position:absolute;inset:0}
+.band__cap{position:absolute;left:0;right:0;bottom:0;z-index:2;color:var(--ivory);padding-bottom:clamp(28px,4vw,52px)}
+.band__cap p{font-family:var(--f-display);font-size:clamp(28px,3.6vw,54px);line-height:1.08;max-width:20ch;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.band__cap small{display:block;margin-top:14px;font-family:var(--f-ui);font-size:12.5px;letter-spacing:.04em;color:rgba(242,232,211,.8)}
+.band .ph::after{background:linear-gradient(180deg,rgba(33,29,24,.05) 30%,rgba(33,29,24,.72))}
+.ph-credit{position:absolute;right:12px;bottom:10px;z-index:3;font-family:var(--f-ui);font-size:10.5px;letter-spacing:.02em;color:rgba(242,232,211,.7);text-shadow:0 1px 6px rgba(0,0,0,.5)}
+/* Gold-framed photograph — an offset hairline in gold, used on the Asset Management page */
+.ph--gold{overflow:visible;border-radius:4px}
+.ph--gold img{border-radius:4px}
+.ph--gold::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--gold-hair);border-radius:6px;z-index:-1;pointer-events:none}

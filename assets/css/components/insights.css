@@ -1,0 +1,13 @@
+/* Insight cards — research notes (Asset Management) */
+.icards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.icard{background:var(--ivory);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.icard:hover{transform:translateY(-4px);box-shadow:0 30px 60px -40px rgba(33,29,24,.5)}
+.icard .ph{aspect-ratio:16 / 10}
+.icard__body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:12px;flex:1}
+.icard__body .sticker{align-self:flex-start}
+.icard h3{font-family:var(--f-display);font-weight:400;font-size:clamp(23px,2vw,28px);line-height:1.18}
+.icard p{font-size:15.5px;line-height:1.65;color:var(--ink-soft)}
+.icard__foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-family:var(--f-ui);font-size:13px;color:var(--ink-muted)}
+.icard--text{border-top:3px solid var(--gold)}
+@media (max-width:900px){.icards{grid-template-columns:1fr}}
+

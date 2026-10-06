@@ -1,0 +1,33 @@
+{
+  "slots": {
+    "homeHero": "",
+    "homeIntro": "",
+    "practiceAdvisory": "",
+    "practiceAM": "",
+    "practiceInsurance": "",
+    "practiceBroking": "",
+    "homeQuote": "",
+    "cityVadodara": "",
+    "cityMumbai": "",
+    "cityBangalore": "",
+    "cityDelhi": "",
+    "cityKochi": "",
+    "cityDubai": "",
+    "insightCapex": "",
+    "insightDefence": "",
+    "insightRates": "",
+    "advisoryHero": "",
+    "advisoryBand": "",
+    "pmsHero": "",
+    "pmsSignature": "",
+    "pmsRecord": "",
+    "ucwf": "",
+    "ucgf": "",
+    "ucpf": "",
+    "storiesHero": "",
+    "storiesExit": "",
+    "storiesSuccession": "",
+    "storiesNRI": "",
+    "storiesPreservation": ""
+  }
+}

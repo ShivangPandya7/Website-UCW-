@@ -1,0 +1,124 @@
+# Decap CMS — the admin panel at /admin
+# Hosting: Netlify with Identity + Git Gateway enabled (see README-DEPLOY.md)
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "assets/img/photos"
+public_folder: "/assets/img/photos"
+site_url: https://uppercrustwealth.com
+display_url: https://uppercrustwealth.com
+locale: en
+
+collections:
+  - name: settings
+    label: "Website data"
+    editor: {preview: false}
+    files:
+      - label: "Contact, event and firm details"
+        name: site
+        file: content/site.json
+        fields:
+          - label: "Contact"
+            name: contact
+            widget: object
+            fields:
+              - {label: "Phone (as displayed)", name: phone, widget: string}
+              - {label: "Phone (for tap-to-call, digits only with +91)", name: tel, widget: string}
+              - {label: "Email", name: email, widget: string}
+              - {label: "Office address", name: address, widget: string}
+              - {label: "WhatsApp link", name: whatsapp, widget: string}
+              - {label: "LinkedIn link", name: linkedin, widget: string}
+          - label: "Event in the header (sticker hides itself after the date)"
+            name: event
+            widget: object
+            fields:
+              - {label: "Name", name: name, widget: string}
+              - {label: "Date (YYYY-MM-DD)", name: date, widget: string}
+              - {label: "Sticker text", name: dateLabel, widget: string}
+              - {label: "Venue", name: venue, widget: string}
+              - {label: "Link", name: url, widget: string}
+          - label: "Firm figures"
+            name: stats
+            widget: object
+            fields:
+              - {label: "Assets across the practice", name: aum, widget: string}
+              - {label: "Years", name: years, widget: string}
+              - {label: "Cities", name: cities, widget: string}
+          - {label: "PMS provider (legal name)", name: pmsProvider, widget: string}
+          - {label: "SEBI PMS registration number", name: sebiRegistration, widget: string}
+          - {label: "Performance spreadsheet — published CSV link from Google Sheets", name: sheetCsvUrl, widget: string, required: false, hint: "Google Sheets → File → Share → Publish to web → sheet → CSV. Paste the link here. Leave empty to use content/performance.csv."}
+          - label: "Compliance officer (shown in the footer)"
+            name: compliance
+            widget: object
+            fields:
+              - {label: "Name", name: name, widget: string, required: false}
+              - {label: "Email", name: email, widget: string, required: false}
+              - {label: "Phone", name: phone, widget: string, required: false}
+          - {label: "Enquiry handling", name: formEndpoint, widget: select, options: ["netlify"], default: "netlify", hint: "netlify = enquiries arrive in the Netlify dashboard and by email"}
+
+      - label: "Insights (research notes)"
+        name: insights
+        file: content/insights.json
+        fields:
+          - label: "Notes"
+            name: items
+            widget: list
+            fields:
+              - {label: "Kind", name: kind, widget: select, options: ["Quarterly letter", "Sector report", "Market outlook", "Investment note"]}
+              - {label: "Title", name: title, widget: string}
+              - {label: "Summary", name: summary, widget: text}
+              - {label: "Read time", name: readTime, widget: string, required: false}
+              - {label: "Photo", name: image, widget: select, options: ["insightCapex", "insightDefence", "insightRates"], required: false}
+              - {label: "PDF (optional — otherwise visitors request it by email)", name: file, widget: file, required: false}
+
+      - label: "Leadership"
+        name: team
+        file: content/team.json
+        fields:
+          - label: "Leaders"
+            name: members
+            widget: list
+            fields:
+              - {label: "Name", name: name, widget: string}
+              - {label: "Role", name: role, widget: string}
+              - {label: "One-line bio", name: bio, widget: text}
+              - {label: "Portrait (4:5, studio)", name: photo, widget: image, required: false}
+              - {label: "LinkedIn profile URL", name: linkedin, widget: string, required: false}
+
+      - label: "Photographs"
+        name: images
+        file: content/images.json
+        fields:
+          - label: "One slot per place on the site — upload to replace that photo"
+            name: slots
+            widget: object
+            fields:
+          - {label: "Mumbai’s high-rises rising in layers beside the water at night", name: "homeHero", widget: image, required: false, hint: "Default file name: home-hero.jpg"}
+          - {label: "An Indian family of three generations in conversation with their wealth manager", name: "homeIntro", widget: image, required: false, hint: "Default file name: home-intro.jpg"}
+          - {label: "A quiet boardroom set for a private meeting", name: "practiceAdvisory", widget: image, required: false, hint: "Default file name: practice-advisory.jpg"}
+          - {label: "The UpperCrust office, with the bronze bull in a gold-lit display case", name: "practiceAM", widget: image, required: false, hint: "Default file name: practice-asset-management.jpg"}
+          - {label: "A young family holding their baby", name: "practiceInsurance", widget: image, required: false, hint: "Default file name: practice-insurance.jpg"}
+          - {label: "Live market charts on a trading screen", name: "practiceBroking", widget: image, required: false, hint: "Default file name: practice-broking.jpg"}
+          - {label: "The sale agreement being signed — the close of one chapter and the start of the next", name: "homeQuote", widget: image, required: false, hint: "Default file name: home-quote.jpg"}
+          - {label: "Laxmi Vilas Palace, Vadodara", name: "cityVadodara", widget: image, required: false, hint: "Default file name: city-vadodara.jpg"}
+          - {label: "The Taj Mahal Palace and Gateway of India, Mumbai", name: "cityMumbai", widget: image, required: false, hint: "Default file name: city-mumbai.jpg"}
+          - {label: "Vidhana Soudha, Bangalore", name: "cityBangalore", widget: image, required: false, hint: "Default file name: city-bangalore.jpg"}
+          - {label: "The Lotus Temple, Delhi, at dusk", name: "cityDelhi", widget: image, required: false, hint: "Default file name: city-delhi.jpg"}
+          - {label: "Chinese fishing nets at sunset, Kochi", name: "cityKochi", widget: image, required: false, hint: "Default file name: city-kochi.jpg"}
+          - {label: "Palm Jumeirah, Dubai, from the air", name: "cityDubai", widget: image, required: false, hint: "Default file name: city-dubai.jpg"}
+          - {label: "High-voltage transmission towers at dusk", name: "insightCapex", widget: image, required: false, hint: "Default file name: insight-capex.jpg"}
+          - {label: "Precision electronics, close up", name: "insightDefence", widget: image, required: false, hint: "Default file name: insight-defence.jpg"}
+          - {label: "Mumbai, India’s financial capital, in black and white", name: "insightRates", widget: image, required: false, hint: "Default file name: insight-rates.jpg"}
+          - {label: "A tailor hand-stitching the lapel of a bespoke jacket", name: "advisoryHero", widget: image, required: false, hint: "Default file name: advisory-hero.jpg"}
+          - {label: "The Bandra–Worli Sea Link leading toward the Mumbai skyline — the road ahead", name: "advisoryBand", widget: image, required: false, hint: "Default file name: advisory-band.jpg"}
+          - {label: "Gold bullion", name: "pmsHero", widget: image, required: false, hint: "Default file name: pms-hero.jpg"}
+          - {label: "An engineer working inside a jet engine — built by hand, with precision", name: "pmsSignature", widget: image, required: false, hint: "Default file name: pms-signature.jpg"}
+          - {label: "A modern villa with a pool, lit at dusk", name: "pmsRecord", widget: image, required: false, hint: "Default file name: pms-record.jpg"}
+          - {label: "Chess pieces in a line, the king alone in sharp focus", name: "ucwf", widget: image, required: false, hint: "Default file name: ucwf.jpg"}
+          - {label: "A chessboard mid-game, many pieces working together", name: "ucgf", widget: image, required: false, hint: "Default file name: ucgf.jpg"}
+          - {label: "The king and queen of a chess set — legacy, held by very few", name: "ucpf", widget: image, required: false, hint: "Default file name: ucpf.jpg"}
+          - {label: "A lamp-lit private desk", name: "storiesHero", widget: image, required: false, hint: "Default file name: stories-hero.jpg"}
+          - {label: "Three generations of hands held together", name: "storiesExit", widget: image, required: false, hint: "Default file name: stories-exit.jpg"}
+          - {label: "Grandparents holding their grandchild", name: "storiesSuccession", widget: image, required: false, hint: "Default file name: stories-succession.jpg"}
+          - {label: "The Dubai skyline, where the client lives", name: "storiesNRI", widget: image, required: false, hint: "Default file name: stories-nri.jpg"}
+          - {label: "A calm sea meeting the shore — staying steady through the storm", name: "storiesPreservation", widget: image, required: false, hint: "Default file name: stories-preservation.jpg"}

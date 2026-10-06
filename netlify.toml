@@ -1,0 +1,39 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# The three fund pages now live as chapters of the Asset Management page
+[[redirects]]
+  from = "/fund-ucwf.html"
+  to = "/pms.html#ucwf"
+  status = 301
+[[redirects]]
+  from = "/fund-ucgf.html"
+  to = "/pms.html#ucgf"
+  status = 301
+[[redirects]]
+  from = "/fund-ucpf.html"
+  to = "/pms.html#ucpf"
+  status = 301
+
+# Mutual fund advisory now lives inside Wealth Advisory
+[[redirects]]
+  from = "/mf.html"
+  to = "/wealth-advisory.html#mutual-funds"
+  status = 301

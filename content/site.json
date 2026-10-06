@@ -1,0 +1,31 @@
+{
+  "contact": {
+    "phone": "+91 81411 22322",
+    "tel": "+918141122322",
+    "email": "yash@uppercrustwealth.com",
+    "address": "316–317 Pancham Icon, Vasna, Vadodara 390025",
+    "whatsapp": "https://wa.me/918141122322",
+    "linkedin": "#"
+  },
+  "event": {
+    "name": "Wealth Conclave ’26",
+    "date": "2026-10-10",
+    "dateLabel": "10 Oct",
+    "venue": "Waves Club, Vadodara",
+    "url": "https://uppercrustconclave.in"
+  },
+  "stats": {
+    "aum": "₹1,000 Cr+",
+    "years": "25+ years",
+    "cities": "6 cities"
+  },
+  "sebiRegistration": "INP000004482",
+  "formEndpoint": "netlify",
+  "pmsProvider": "Moat Financial Services Pvt. Ltd.",
+  "sheetCsvUrl": "",
+  "compliance": {
+    "name": "",
+    "email": "",
+    "phone": ""
+  }
+}

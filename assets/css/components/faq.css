@@ -1,0 +1,12 @@
+/* FAQ — native <details>, one open at a time via the name attribute */
+.faq{border-top:1px solid var(--line-strong)}
+.faq details{border-bottom:1px solid var(--line-strong)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 24px;gap:24px;align-items:center;padding:26px 0;font-family:var(--f-display);font-size:clamp(22px,2.2vw,30px);line-height:1.25;transition:color .3s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--gold-deep)}
+.faq summary i{position:relative;width:18px;height:18px;justify-self:end}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:currentColor;transition:transform .5s var(--ease)}
+.faq summary i::after{transform:rotate(90deg)}
+.faq details[open] summary i::after{transform:rotate(0)}
+.faq .ans{padding:0 0 30px;max-width:66ch;font-size:17px;color:var(--ink-soft)}
+.faq details[open] .ans{animation:fadeIn .6s var(--ease)}

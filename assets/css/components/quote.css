@@ -1,0 +1,7 @@
+/* Pull quote — a client's own words, set large */
+.pull{position:relative}
+.pull blockquote{font-family:var(--f-display);font-size:clamp(34px,4.6vw,72px);line-height:1.08;letter-spacing:-.012em;text-indent:-.42em;max-width:20ch}
+.pull blockquote::before{content:"\201C";color:var(--gold-hair)}
+.pull blockquote::after{content:"\201D";color:var(--gold-hair)}
+.pull figcaption{margin-top:34px;font-family:var(--f-text);font-style:italic;font-size:17px;color:var(--ink-muted);max-width:52ch}
+.sec--dark .pull figcaption{color:var(--on-dark-muted)}
