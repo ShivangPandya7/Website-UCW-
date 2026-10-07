@@ -7,7 +7,6 @@
   function remember(who) { try { localStorage.setItem(KEY, JSON.stringify(who)); } catch (e) {} }
   function saved() { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } }
   function esc(t) { return String(t || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
-  function mail(subject) { return 'mailto:' + (UC.site.contact.leadEmail || UC.site.contact.email) + '?subject=' + encodeURIComponent(subject); }
 
   function noteHTML(n) {
     var body = (n.body || '').split(/\n\s*\n/).filter(Boolean).map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');

@@ -1,5 +1,5 @@
 /* The enquiry letter. Inline inputs grow with what is typed.
-   Sends JSON to UC.site.formEndpoint if set; otherwise opens the visitor's email app with the letter written out. */
+   Sends the letter to the lead endpoint (Google Apps Script -> Google Sheet). It never opens the visitor's email app. */
 (function () {
   function grow(input) {
     var len = Math.max((input.value || '').length, (input.getAttribute('placeholder') || '').length, 4);
@@ -39,31 +39,18 @@
         bad[0].focus();
         return;
       }
-      var endpoint = (window.UC.site && UC.site.formEndpoint) || form.dataset.endpoint;
       var data = {}; new FormData(form).forEach(function (v, k) { data[k] = v; });
       data.page = location.pathname; data.letter = text();
-      if (UC.site.leadEndpoint) {
-        btn.disabled = true; status.className = 'letter__status'; status.textContent = 'Sending…';
-        var lead = Object.assign({ type: 'enquiry', page: location.pathname }, data);
-        var ok = function () { done('Received. We will call you within one business day.'); };
-        fetch(UC.site.leadEndpoint, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(lead) }).then(ok, ok);
-      } else if (endpoint === 'netlify' && !/github\.io$/.test(location.hostname)) {
-        btn.disabled = true; status.className = 'letter__status'; status.textContent = 'Sending…';
-        var body = new URLSearchParams(); body.append('form-name', 'enquiry');
-        Object.keys(data).forEach(function (k) { body.append(k, data[k]); });
-        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
-          .then(function (r) { if (!r.ok) throw new Error(r.status); done('Received. We will call you within one business day.'); })
-          .catch(function () { btn.disabled = false; status.className = 'letter__status is-error'; status.textContent = 'The letter did not send. Call ' + UC.site.contact.phone + ' or try again.'; });
-      } else if (endpoint && endpoint !== 'netlify') {
-        btn.disabled = true; status.className = 'letter__status'; status.textContent = 'Sending…';
-        fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
-          .then(function (r) { if (!r.ok) throw new Error(r.status); done('Received. We will call you within one business day.'); })
-          .catch(function () { btn.disabled = false; status.className = 'letter__status is-error'; status.textContent = 'The letter did not send. Call ' + UC.site.contact.phone + ' or try again.'; });
-      } else {
-        var subject = form.dataset.subject || 'Private enquiry';
-        location.href = 'mailto:' + (UC.site.contact.leadEmail || UC.site.contact.email) + '?subject=' + encodeURIComponent(subject + ' — ' + (data.name || '')) + '&body=' + encodeURIComponent(data.letter);
-        done('Your letter is open in your email app. Send it and we will reply within one business day.');
-      }
+      var url = UC.site.leadEndpoint;
+      var fail = function () {
+        btn.disabled = false; status.className = 'letter__status is-error';
+        status.textContent = 'Your letter could not be sent just now. Please try again in a moment, or call ' + UC.site.contact.phone + '.';
+      };
+      if (!url) { fail(); return; }   // the letter is only ever recorded in the Google Sheet; no email app is opened
+      btn.disabled = true; status.className = 'letter__status'; status.textContent = 'Sending…';
+      var lead = Object.assign({ type: 'enquiry', page: location.pathname }, data);
+      fetch(url, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(lead) })
+        .then(function () { done('Received. We will call you within one business day.'); }, fail);
     });
     function done(msg) { form.classList.add('is-sent'); status.className = 'letter__status'; status.textContent = msg; btn.textContent = 'Letter written'; btn.disabled = true; }
   });

@@ -169,3 +169,9 @@ Until step 4 is done, downloads still work and letters open the visitor's email 
 If you change the script later, use Deploy, Manage deployments, Edit, New version. The URL stays the same.
 The Downloads sheet records name, mobile, email, the document, and the news-and-updates consent (Yes or No). If you created the Downloads tab
 with an earlier version of the script, delete that tab once; the script re-creates it with the new columns.
+
+### Which Google account owns the sheet
+Create the Google Sheet and the Apps Script while signed in as **social@uppercrustwealth.com**. The sheet then lives in that
+account, the script runs as that account, and the notification email (`NOTIFY_EMAIL`) goes to the same inbox.
+Enquiry letters and downloads are only ever recorded this way: the letter no longer opens the visitor's email app. If the
+endpoint is not set (or unreachable) the letter shows "could not be sent just now" with the phone number, so set `leadEndpoint` before launch.
