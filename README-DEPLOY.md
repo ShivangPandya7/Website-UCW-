@@ -47,12 +47,20 @@ Every save is a Git commit — versioned and reversible.
 The record panel and AUM figures follow the sheet. If no link is set, `content/performance.csv` is used.
 
 ## 5. Enquiries
-The enquiry letter is emailed to **yash@uppercrustwealth.com** through the FormSubmit relay (set in
-`content/site.json` → `formEndpoint`, and editable in /admin → Contact, event and firm details).
-**One-time step:** after the site is live, send one test letter from any page. FormSubmit emails Yash a
-confirmation link; clicking it activates delivery. Until then, letters are held, not lost.
-If a send fails, the visitor is offered their own email app with the letter already written.
-To use Netlify Forms instead, set the enquiry handling to "Netlify Forms" (works only on Netlify hosting).
+Netlify → **Forms → Enable form detection**, redeploy once. Letters arrive under Forms → `enquiry`; add an email notification.
+
+
+## Leads & enquiries on GitHub Pages (Google Sheet)
+GitHub Pages cannot receive form posts, so the site sends them to a small Google Apps Script instead:
+1. Open `backend/apps-script.gs` and follow the 5 steps at the top (create a Sheet, paste the script, deploy as a web app).
+2. Paste the web-app URL into /admin → Contact, event and firm details → **Lead & enquiry endpoint**
+   (or into `content/site.json` → `"leadEndpoint"` if you edit files directly).
+Every **Research library** sign-up (name, mobile, email) and every **enquiry letter** then lands in the Sheet — optionally emailed to you.
+Until the URL is set, the Research room still opens and enquiry letters open the visitor's email app.
+
+## Research library (resources.html)
+Locked behind a short form. After a visitor submits name, mobile and email, the room stays unlocked on their device.
+Notes come from /admin → Insights; attach a PDF to a note to make it downloadable.
 
 ## Before launch — please confirm
 - PMS wording approved by compliance (footer and disclosure name Moat Financial Services Pvt. Ltd., SEBI PMS Reg. No. INP000004482).
@@ -100,11 +108,8 @@ To use Netlify Forms instead, set the enquiry handling to "Netlify Forms" (works
 │   │   │   ├── soon.css
 │   │   │   └── stories.css
 │   │   └── tokens.css
-│   ├── docs/
-│   │   └── UpperCrust-PMS-Brochure.pdf
 │   ├── fonts/  (7 files)
 │   ├── img/
-│   │   ├── brochure-cover.jpg
 │   │   ├── logo-dark.png
 │   │   ├── logo-light.png
 │   │   └── photos/  (11 files)
@@ -137,7 +142,6 @@ To use Netlify Forms instead, set the enquiry handling to "Netlify Forms" (works
 │       └── uc.js
 ├── broking.html
 ├── client-stories.html
-├── resources.html
 ├── content/
 │   ├── funds.json
 │   ├── images.json
@@ -153,3 +157,13 @@ To use Netlify Forms instead, set the enquiry handling to "Netlify Forms" (works
 ├── sitemap.xml
 └── wealth-advisory.html
 ```
+
+## Downloads and enquiries into Google Sheets
+Every document download (name, mobile, email, which document) and every enquiry letter is sent to a Google Apps Script
+web app that writes it into a Google Sheet and emails yash@uppercrustwealth.com.
+1. In the Sheet: Extensions, Apps Script, paste `backend/apps-script.gs`, Save.
+2. Deploy, New deployment, Web app. Execute as: Me. Who has access: Anyone. Deploy and approve the permissions.
+3. Copy the web app URL (https://script.google.com/macros/s/.../exec).
+4. Paste it into `content/site.json` as the value of `leadEndpoint` (or /admin, Contact, event and firm details), then commit.
+Until step 4 is done, downloads still work and letters open the visitor's email app.
+If you change the script later, use Deploy, Manage deployments, Edit, New version. The URL stays the same.

@@ -5,7 +5,7 @@ One photograph per place. Replace any of them in **/admin → Photographs** (or 
 | Place | File name | What it should show | Page |
 |---|---|---|---|
 | homeHero | `home-hero.jpg` | Mumbai’s high-rises rising in layers beside the water at night | Home |
-| homeIntro | `home-intro.jpg` | An Indian family of three generations in conversation with their wealth manager | Home |
+| homeIntro | `home-intro-walk.jpg` | A family walking hand in hand into a golden sunset, seen from behind (no faces) | Home |
 | practiceAdvisory | `practice-advisory.jpg` | A quiet boardroom set for a private meeting | Home |
 | practiceAM | `practice-asset-management.jpg` | The UpperCrust office, with the bronze bull in a gold-lit display case | Home |
 | practiceInsurance | `practice-insurance.jpg` | A young family holding their baby | Home |
@@ -19,7 +19,7 @@ One photograph per place. Replace any of them in **/admin → Photographs** (or 
 | cityDubai | `city-dubai.jpg` | Palm Jumeirah, Dubai, from the air | Home |
 | insightCapex | `insight-capex.jpg` | High-voltage transmission towers at dusk | Asset Management |
 | insightDefence | `insight-defence.jpg` | Precision electronics, close up | Asset Management |
-| insightRates | `insight-rates.jpg` | Mumbai, India’s financial capital, in black and white | Asset Management |
+| insightRates | `insight-metals.jpg` | Gold bars — ballast for a portfolio | Asset Management (insights) |
 | advisoryHero | `advisory-hero.jpg` | A tailor hand-stitching the lapel of a bespoke jacket | Wealth Advisory |
 | advisoryBand | `advisory-band.jpg` | The Bandra–Worli Sea Link leading toward the Mumbai skyline — the road ahead | Wealth Advisory |
 | pmsHero | `pms-hero.jpg` | Gold bullion | Asset Management |
@@ -36,3 +36,4 @@ One photograph per place. Replace any of them in **/admin → Photographs** (or 
 | portraitDurgesh | `durgesh-pandya.jpg` | Durgesh Pandya | Home |
 | portraitYash | `yash-joshi.jpg` | Yash Joshi | Home |
 | portraitManish | `manish-shah.jpg` | Manish Shah | Home |
+| resourcesHero | `resources-hero.jpg` | A calm, light-filled private study | Resources |

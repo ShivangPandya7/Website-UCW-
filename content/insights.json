@@ -1,28 +1,31 @@
 {
   "items": [
     {
-      "kind": "Quarterly letter",
-      "title": "Where we are in the capex cycle, and why it matters",
-      "summary": "Our view on India’s private capex revival and what it means for portfolio construction over the next three years.",
-      "readTime": "8 min read",
-      "image": "insightCapex",
-      "file": ""
-    },
-    {
+      "id": "defence",
       "kind": "Sector report",
-      "title": "Defence and precision manufacturing: the self-reliance premium",
-      "summary": "A structural read on India’s defence indigenisation and the companies positioned to compound through it.",
-      "readTime": "12 min read",
+      "title": "Defence: the self-reliance decade",
       "image": "insightDefence",
-      "file": ""
+      "readTime": "7 min read",
+      "summary": "Why we treat India’s defence manufacturing as a multi-year order book, not a theme — and how we decide which companies have earned a place.",
+      "body": "For most of the last fifty years, India bought its defence equipment abroad. That is changing, and not because of a single budget or a single announcement. Procurement rules now favour domestic manufacturers, export ambitions have become explicit, and a generation of Indian companies has spent the last decade building the capability to deliver.\n\nWe do not buy a theme. A sector can be right for a decade and still be the wrong place to pay any price. What we look for is visibility: order books that stretch years ahead, execution records that show contracts turning into revenue on time, and balance sheets strong enough to fund the working capital that defence contracts demand.\n\nThe risks are real — lumpy orders, government as the dominant customer, and valuations that can run well ahead of earnings. That is why sizing matters as much as selection. Where defence appears in a client portfolio, it is sized to the family’s horizon and risk appetite, not to the enthusiasm of the market.\n\nThe question we keep asking is simple: if the share price did nothing for three years, would we be comfortable owning this business? Only those that pass make it into the portfolios we manage."
     },
     {
-      "kind": "Market outlook",
-      "title": "Rates, currency, and the case for staying disciplined",
-      "summary": "Why we continue to underwrite quality over momentum as global rate expectations shift.",
+      "id": "power",
+      "kind": "Quarterly letter",
+      "title": "Power equipment and the grid India now has to build",
+      "image": "insightCapex",
       "readTime": "6 min read",
+      "summary": "Electricity demand, renewables and data centres are forcing a once-in-a-generation build-out of transmission and equipment. Here is how we think about owning it.",
+      "body": "Every new factory, metro line, data centre and solar park needs one thing first: power that reaches it reliably. India’s demand for electricity is rising, and the grid that carries it — transformers, switchgear, cables, transmission lines — has to grow faster than it has in decades.\n\nThis is what makes power equipment interesting to us. It is not a bet on any one fuel. Whether the next unit of electricity comes from coal, sun or wind, it still has to be transmitted, stepped down and distributed. The companies that make that equipment sit underneath the entire energy transition.\n\nCapital-goods cycles are long, and they reward patience more than timing. We prefer manufacturers with pricing power, healthy order inflows and the discipline not to chase low-margin contracts for the sake of growth. We are equally careful about what has already been priced in.\n\nIn practice, power equipment sits alongside other domestic manufacturing in the portfolios where it fits — never as a concentrated wager, always as part of a plan built around a family’s goals."
+    },
+    {
+      "id": "metals",
+      "kind": "Market outlook",
+      "title": "Gold and silver in a bespoke portfolio",
       "image": "insightRates",
-      "file": ""
+      "readTime": "5 min read",
+      "summary": "Precious metals are not a trade for us. They are ballast — and how much ballast each family needs is a personal decision, not a market call.",
+      "body": "Gold has done what it has always done in uncertain years: held its value when other assets wobbled. Silver, more industrial and more volatile, tends to amplify those moves in both directions. Neither pays a dividend, and neither should be expected to compound like a good business.\n\nSo why hold them at all? Because a portfolio is not judged only by how fast it grows, but by whether a family can stay invested through difficult markets. A measured allocation to precious metals can steady the whole, especially when currencies or interest rates move sharply.\n\nHow much is right depends entirely on the family. A business owner with a concentrated exposure to one industry may need more ballast than a salaried professional with steady income. This is where bespoke portfolios matter — no two of the portfolios we manage carry the same mix, because no two families face the same risks.\n\nWe access precious metals through efficient, regulated instruments such as ETFs and funds rather than physical holdings, and we review the allocation alongside everything else, every quarter."
     }
   ]
 }

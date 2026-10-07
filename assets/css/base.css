@@ -44,3 +44,7 @@ em,i{font-style:italic}
 
 /* Figures bound to the admin panel inherit their surroundings exactly */
 span[data-bind][data-bind][data-bind]{font:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit;display:inline;margin:0;padding:0;background:none;border:0;max-width:none;opacity:1}
+
+/* Never let anything widen the page on phones (keeps sticky elements working, unlike overflow:hidden) */
+html,body{overflow-x:clip}
+@supports not (overflow:clip){html,body{overflow-x:hidden}}

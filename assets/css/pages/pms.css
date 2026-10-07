@@ -196,3 +196,16 @@ body.hdr-hidden .subnav{top:12px}
 .tcard3.is-featured .tcard3__meta{color:var(--ink)!important}
 .tcard3.is-featured .btn{--bg:var(--ink);--fg:var(--ivory);--fill:var(--gold-deep)}
 .tcard3.is-featured .link{color:var(--ink)}
+
+/* Three funds on mobile: a swipeable row with tabs, opening on the flagship */
+.trio-tabs{display:none}
+@media (max-width:900px){
+  .trio-tabs{display:flex;gap:6px;justify-content:center;margin:0 0 18px;padding:5px;border-radius:40px;background:rgba(33,29,24,.06);border:1px solid var(--line);width:fit-content;margin-inline:auto}
+  .trio-tabs button{font-family:var(--f-ui);font-size:13.5px;letter-spacing:.03em;padding:9px 18px;border-radius:30px;color:var(--ink-muted);transition:background .35s,color .35s}
+  .trio-tabs button[aria-selected="true"]{background:var(--ink);color:var(--ivory)}
+  .trio{display:flex!important;grid-template-columns:none!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:8px 7vw 28px;margin-inline:calc(-1 * var(--gutter));scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .trio::-webkit-scrollbar{display:none}
+  .tcard3{flex:0 0 86%;scroll-snap-align:center}
+  .tcard3.is-featured,.tcard3.is-featured:hover{transform:none}
+  .tcard3__img{aspect-ratio:16 / 9}
+}

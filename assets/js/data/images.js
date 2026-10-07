@@ -17,7 +17,7 @@ UC.ownPhotos = [
   UC.images = {
     // Home
     homeHero:           s('home-hero.jpg', 'Mumbai’s high-rises rising in layers beside the water at night', 'photo-1575261755165-1a9d4370c898', '50% 55%'),
-    homeIntro:          s('home-intro-photo.jpg', 'A father and son silhouetted against a golden sunset — the bond a plan is built to protect', ['https://images.pexels.com/photos/29702438/pexels-photo-29702438.jpeg?auto=compress&cs=tinysrgb&w=1600', 'photo-1621176313593-89976c1f1bed'], '50% 55%'),
+    homeIntro:          s('home-intro-walk.jpg', 'A family of three walking hand in hand into a golden sunset, seen from behind', ['https://images.pexels.com/photos/3030090/pexels-photo-3030090.jpeg?auto=compress&cs=tinysrgb&w=1800', 'https://images.pexels.com/photos/9207532/pexels-photo-9207532.jpeg?auto=compress&cs=tinysrgb&w=1800'], '50% 55%'),
     practiceAdvisory:   s('practice-advisory.jpg', 'A quiet boardroom set for a private meeting', 'photo-1706074793638-da28b90ea8ae'),
     practiceAM:         s('practice-asset-management.jpg', 'The UpperCrust office, with the bronze bull in a gold-lit display case', 'photo-1706074797611-a02f9ed06439', '50% 55%'),
     practiceInsurance:  s('practice-insurance.jpg', 'A young family holding their baby', 'photo-1657912230172-23f8b31665ed', '50% 30%'),
@@ -33,7 +33,7 @@ UC.ownPhotos = [
     // Insights — one image per research story
     insightCapex:       s('insight-capex.jpg', 'High-voltage transmission towers at dusk', 'photo-1473341304170-971dccb5ac1e'),
     insightDefence:     s('insight-defence.jpg', 'Precision electronics, close up', 'photo-1518770660439-4636190af475'),
-    insightRates:       s('insight-rates.jpg', 'Mumbai, India’s financial capital, in black and white', 'photo-1645207825163-4e231ee2d707'),
+    insightRates:       s('insight-metals.jpg', 'Gold bars — ballast for a portfolio', ['https://images.pexels.com/photos/47047/pexels-photo-47047.jpeg?auto=compress&cs=tinysrgb&w=1400', 'photo-1645207825163-4e231ee2d707']),
     // Wealth Advisory
     advisoryHero:       s('advisory-hero.jpg', 'A tailor hand-stitching the lapel of a bespoke jacket', 'photo-1706074740295-d7a79c079562', '62% 45%'),
     advisoryBand:       s('advisory-band.jpg', 'The Bandra–Worli Sea Link leading toward the Mumbai skyline — the road ahead', 'photo-1569758267239-d08deb78bb1a', '50% 55%'),
@@ -51,6 +51,7 @@ UC.ownPhotos = [
     storiesSuccession:  s('stories-succession.jpg', 'A father’s hand holding his child’s — the bond that carries a family forward', ['https://images.pexels.com/photos/4005249/pexels-photo-4005249.jpeg?auto=compress&cs=tinysrgb&w=2200', 'photo-1621176313593-89976c1f1bed'], '50% 50%'),
     storiesNRI:         s('stories-nri.jpg', 'The Dubai skyline, where the client lives', 'photo-1512453979798-5ea266f8880c'),
     storiesPreservation: s('stories-preservation.jpg', 'A calm sea meeting the shore — staying steady through the storm', 'photo-1507525428034-b723cf961d3e'),
+    resourcesHero:      s('resources-hero.jpg', 'A calm, light-filled private study', 'photo-1600607687939-ce8a6c25118c'),
     // Leadership — initials show until a portrait is added
     portraitDurgesh:    s('durgesh-pandya.jpg', 'Durgesh Pandya', null, '50% 25%'),
     portraitYash:       s('yash-joshi.jpg', 'Yash Joshi', null, '50% 25%'),

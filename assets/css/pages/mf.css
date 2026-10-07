@@ -33,3 +33,17 @@
   .flow__level{animation-duration:6.4s!important;animation-iteration-count:infinite!important}
 }
 .flow:hover .flow__in rect,.flow:hover .flow__out rect{animation-play-state:paused}
+
+/* SIP / SWP on phones: a tall diagram — money drops in from above, the goal fills, withdrawals flow out below */
+.flow__tall{display:none}
+@media (max-width:700px){
+  .flow__wide{display:none}
+  .flow__tall{display:block;width:100%;max-width:340px;margin:0 auto}
+  .flow__tall text{font-size:15px}
+  .flowv__label{font-family:var(--f-text)!important;font-style:italic;font-size:17px!important;fill:var(--gold-deep)!important}
+  .flowv__in rect{fill:var(--gold);animation:flowDown 1.5s linear infinite!important}
+  .flowv__out rect{fill:var(--gold-hair);animation:flowDown 2.2s linear infinite!important}
+  .flowv__level{transform-box:fill-box;transform-origin:bottom;animation:levelV 6s ease-in-out infinite alternate!important}
+}
+@keyframes flowDown{from{transform:translateY(0);opacity:.35}50%{opacity:1}to{transform:translateY(28px);opacity:.35}}
+@keyframes levelV{from{transform:scaleY(.55)}to{transform:scaleY(1)}}

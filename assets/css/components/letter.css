@@ -67,3 +67,5 @@
 .picker:hover,.picker:focus-visible{border-color:var(--gold);outline:none}
 .fill .suggest li[aria-selected="true"]{color:var(--gold-deep)}
 .fill .suggest li[aria-selected="true"]::before{background:var(--gold)}
+/* keep suggestion lists inside the screen on phones */
+@media (max-width:700px){.fill .suggest{left:0;right:auto;min-width:0;width:min(340px,calc(100vw - 40px));max-width:calc(100vw - 40px)}.fill--pick{white-space:normal}.picker{white-space:normal}}

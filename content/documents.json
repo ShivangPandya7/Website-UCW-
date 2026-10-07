@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "kind": "Brochure",
+      "title": "UpperCrust PMS brochure",
+      "summary": "Our three strategies, who each suits, the fund details, the team and our offices, in eleven pages.",
+      "file": "assets/docs/UpperCrust-PMS-Brochure.pdf"
+    },
+    {
+      "kind": "Factsheet",
+      "title": "UpperCrust Wealth Fund (UCWF), August 2026",
+      "summary": "Strategy, portfolio mix, risk measures and performance against the BSE 500, in one page.",
+      "file": "assets/docs/UCWF-Factsheet-Aug-2026.pdf"
+    },
+    {
+      "kind": "Fund details",
+      "title": "UpperCrust Growth Fund (UCGF)",
+      "summary": "How we allocate across equities, mutual funds, ETFs and fixed income, and the latest performance.",
+      "file": ""
+    },
+    {
+      "kind": "Fund details",
+      "title": "UpperCrust Prosperity Fund (UCPF)",
+      "summary": "For families considering a concentrated, long-horizon mandate. Shared on request.",
+      "file": ""
+    },
+    {
+      "kind": "Regulatory",
+      "title": "PMS disclosure document",
+      "summary": "The disclosure document for our portfolio management services.",
+      "file": ""
+    }
+  ]
+}

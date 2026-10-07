@@ -176,3 +176,34 @@
   .intro__line{animation:introFadeIn 1.4s ease 2s both!important}
   .has-intro .hero--photo .hero__body,.has-intro .hero--photo .hero__ledger{animation:introFadeIn 1.6s cubic-bezier(.22,1,.36,1) 4.3s both!important}
 }
+
+/* ============ INTRO (final) — premium black, ivory and gold; printed in, faded out ============ */
+html .intro{background:radial-gradient(70% 60% at 50% 45%,#141210 0%,#0A0908 70%,#050505 100%)!important;
+  animation:ucFadeOut 1.2s cubic-bezier(.45,0,.25,1) 3s both!important}
+html .intro::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(40% 30% at 50% 50%,rgba(199,168,104,.07),transparent 70%)}
+html .intro__in{gap:clamp(16px,2.2vw,26px)!important;animation:ucLift 1.1s cubic-bezier(.45,0,.25,1) 3s both!important;position:relative;z-index:1}
+html .intro__logo{width:clamp(150px,13vw,200px);animation:ucFade .9s ease .1s both!important}
+html .intro__welcome{color:#F5EFE3;font-size:clamp(40px,7vw,108px)!important;line-height:1.04}
+html .intro__welcome > span{display:block;animation:ucPrint 1.05s cubic-bezier(.65,0,.35,1) both!important}
+html .intro__l1{animation-delay:.4s!important}
+html .intro__l2{animation-delay:.85s!important}
+html .intro .gold-text{background:linear-gradient(100deg,#F3E2B3 0%,#D9B96E 35%,#B8893F 70%,#E8CF92 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+html .intro__rule{display:block;width:min(380px,64vw);height:1px;background:linear-gradient(90deg,transparent,#C7A868,transparent);animation:ucDraw .9s cubic-bezier(.65,0,.35,1) 1.45s both!important}
+html .intro__segs{max-width:none;margin:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 16px;font-family:var(--f-ui);font-size:clamp(10.5px,1vw,13px);letter-spacing:.24em;text-transform:uppercase;color:#E9DFC9;animation:ucFade .9s ease 1.75s both!important}
+html .intro__segs i{width:4px;height:4px;border-radius:50%;background:#C7A868;display:inline-block}
+html .intro__legacy{max-width:none;margin:0;font-family:var(--f-text);font-style:italic;font-size:clamp(15px,1.4vw,19px);color:#D9B96E;animation:ucFade .9s ease 2.05s both!important}
+html .intro__line{display:none!important}
+@keyframes ucPrint{from{clip-path:inset(0 100% 0 0);opacity:.35}to{clip-path:inset(0 0 0 0);opacity:1}}
+@keyframes ucDraw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes ucFade{from{opacity:0}to{opacity:1}}
+@keyframes ucLift{to{opacity:0;transform:translateY(-14px)}}
+@keyframes ucFadeOut{to{opacity:0;visibility:hidden}}
+html.has-intro .hero--photo .hero__body,html.has-intro .hero--photo .hero__ledger{animation:ucFade 1.4s cubic-bezier(.22,1,.36,1) 3.35s both!important}
+@media (max-width:600px){html .intro__segs{gap:6px 10px;letter-spacing:.16em;padding:0 8px}html .intro__welcome{font-size:clamp(38px,11vw,56px)!important}}
+
+/* ============ OUR APPROACH — the photograph dissolves into the page ============ */
+.ic__media{aspect-ratio:4 / 5}
+.ic__a{clip-path:none!important;-webkit-mask-image:radial-gradient(120% 95% at 62% 42%,#000 52%,rgba(0,0,0,.6) 70%,transparent 92%);mask-image:radial-gradient(120% 95% at 62% 42%,#000 52%,rgba(0,0,0,.6) 70%,transparent 92%)}
+.ic__a img{filter:sepia(.35) saturate(.85) contrast(1.05) brightness(1.02)!important}
+.ic__a::after{display:none}
+@media (max-width:900px){.ic__a{-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 14%,#000 78%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 14%,#000 78%,transparent 100%)}}

@@ -10,8 +10,8 @@ UC.site = {
     linkedin: '#'
   },
   event: { name: 'Wealth Conclave ’26', short: 'Conclave ’26', date: '2026-10-10', dateLabel: '10 Oct', venue: 'Waves Club, Vadodara', url: 'https://uppercrustconclave.in' },
-  // The enquiry letter is emailed to Yash through this relay. Empty = the letter opens in the visitor's email app.
-  formEndpoint: 'https://formsubmit.co/ajax/yash@uppercrustwealth.com',
+  // Set to your form handler URL (POST, JSON). Empty = the letter opens in the visitor's email app.
+  formEndpoint: '',
   practice: [
     { name: 'Wealth Advisory', href: 'wealth-advisory.html', page: 'advisory', note: 'Mutual funds, PMS, AIF and bonds, chosen for your goal rather than from a shelf.' },
     { name: 'Asset Management', href: 'pms.html', page: 'pms', note: 'UCWF, UCGF and UCPF — our three portfolio management strategies.' },

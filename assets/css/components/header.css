@@ -87,3 +87,21 @@ body.menu-open .site-header__toggle .bars::after{top:4px;transform:rotate(-45deg
 .site-header.on-dark .nav-link--event .sticker,.site-header.is-solid-dark .nav-link--event .sticker{background:var(--gold-hair);color:var(--ink)}
 .site-header.is-solid .nav-link--event .sticker{background:var(--ink);color:var(--ivory)}
 @media (max-width:1240px){.nav-link--event .label-long{display:none}}
+
+/* ============ Mobile menu (final) — quieter, lighter, more space ============ */
+.menu{padding:calc(var(--header-h) + 22px) 28px 28px!important;background:linear-gradient(180deg,#0E0C0A,#15120F)!important}
+.menu__group{border-top:1px solid rgba(199,168,104,.16)!important;padding:16px 0 14px!important}
+.menu__group:first-child{border-top:0!important}
+.menu__label{font-family:var(--f-ui)!important;font-style:normal!important;font-size:10.5px!important;letter-spacing:.24em;text-transform:uppercase;color:rgba(199,168,104,.85)!important;margin-bottom:6px!important}
+.menu a{font-family:var(--f-display)!important;font-size:clamp(21px,5.6vw,26px)!important;line-height:1.25!important;padding:7px 0;color:rgba(245,239,227,.92);font-weight:400}
+.menu a small{font-family:var(--f-ui);font-size:10px!important;letter-spacing:.12em;text-transform:uppercase;color:rgba(199,168,104,.9)!important;border:1px solid rgba(199,168,104,.35);border-radius:20px;padding:3px 8px}
+.menu.is-open .menu__group{animation:menuIn .6s cubic-bezier(.22,1,.36,1) both}
+.menu.is-open .menu__group:nth-child(2){animation-delay:.06s}.menu.is-open .menu__group:nth-child(3){animation-delay:.12s}.menu.is-open .menu__foot{animation:menuIn .6s cubic-bezier(.22,1,.36,1) .18s both}
+@keyframes menuIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.menu__foot{gap:14px!important;font-size:13px!important}
+.menu__foot .menu__cta{font-family:var(--f-ui)!important;font-size:14px!important;--bg:var(--ivory);--fg:var(--ink);--fill:var(--gold-hair);justify-content:center;width:100%;padding:0}
+.menu__foot span{color:rgba(245,239,227,.55)}
+.menu__foot span a{display:inline!important;font-family:var(--f-ui)!important;font-size:13px!important;color:rgba(245,239,227,.7)!important;padding:0}
+/* lock beside Resources */
+.lock-ico{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;opacity:.8}
+.menu__foot .menu__cta,.menu .menu__cta{color:var(--ink)!important;background:var(--ivory)!important}

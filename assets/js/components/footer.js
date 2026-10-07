@@ -14,7 +14,7 @@
             '<p>A private wealth practice for India\u2019s business families, professionals and NRIs. Advisory, asset management, insurance and broking, coordinated through one advisor.</p></div>' +
           '<div class="site-footer__col"><h2>The practice</h2>' + practice + '</div>' +
           '<div class="site-footer__col"><h2>Our funds</h2>' + funds + '<a href="pms.html">Compare mandates</a></div>' +
-          '<div class="site-footer__col"><h2>Firm</h2><a href="index.html#approach">Our approach</a><a href="client-stories.html">Client stories</a><a href="pms.html#insights">Insights</a><a href="resources.html">Resources</a></div>' +
+          '<div class="site-footer__col"><h2>Firm</h2><a href="index.html#approach">Our approach</a><a href="client-stories.html">Client stories</a><a href="resources.html">Resources</a><a href="pms.html#insights">Insights</a></div>' +
           '<div class="site-footer__col"><h2>Reach us</h2><a href="tel:' + c.tel + '">' + c.phone + '</a><a href="mailto:' + c.email + '">' + c.email + '</a><a href="' + c.whatsapp + '" rel="noopener">WhatsApp</a><a href="' + c.linkedin + '" rel="noopener">LinkedIn</a></div>' +
         '</div>' +
         '<div class="site-footer__legal">' +

@@ -20,12 +20,13 @@
     "cities": "6 cities"
   },
   "sebiRegistration": "INP000004482",
-  "formEndpoint": "https://formsubmit.co/ajax/yash@uppercrustwealth.com",
+  "formEndpoint": "netlify",
   "pmsProvider": "Moat Financial Services Pvt. Ltd.",
   "sheetCsvUrl": "",
   "compliance": {
     "name": "",
     "email": "",
     "phone": ""
-  }
+  },
+  "leadEndpoint": ""
 }

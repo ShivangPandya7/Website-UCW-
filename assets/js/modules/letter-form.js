@@ -42,25 +42,23 @@
       var endpoint = (window.UC.site && UC.site.formEndpoint) || form.dataset.endpoint;
       var data = {}; new FormData(form).forEach(function (v, k) { data[k] = v; });
       data.page = location.pathname; data.letter = text();
-      var subject0 = (form.dataset.subject || 'Private enquiry') + ' \u2014 ' + (data.name || '');
-      // the email relay reads these fields: subject line, a readable layout, no captcha page, and a spam trap
-      if (/formsubmit\.co/.test(endpoint || '')) { data._subject = subject0; data._template = 'table'; data._captcha = 'false'; data._honey = ''; }
-      if (endpoint === 'netlify') {
+      if (UC.site.leadEndpoint) {
+        btn.disabled = true; status.className = 'letter__status'; status.textContent = 'Sending…';
+        var lead = Object.assign({ type: 'enquiry', page: location.pathname }, data);
+        var ok = function () { done('Received. We will call you within one business day.'); };
+        fetch(UC.site.leadEndpoint, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(lead) }).then(ok, ok);
+      } else if (endpoint === 'netlify' && !/github\.io$/.test(location.hostname)) {
         btn.disabled = true; status.className = 'letter__status'; status.textContent = 'Sending…';
         var body = new URLSearchParams(); body.append('form-name', 'enquiry');
         Object.keys(data).forEach(function (k) { body.append(k, data[k]); });
         fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
           .then(function (r) { if (!r.ok) throw new Error(r.status); done('Received. We will call you within one business day.'); })
           .catch(function () { btn.disabled = false; status.className = 'letter__status is-error'; status.textContent = 'The letter did not send. Call ' + UC.site.contact.phone + ' or try again.'; });
-      } else if (endpoint) {
+      } else if (endpoint && endpoint !== 'netlify') {
         btn.disabled = true; status.className = 'letter__status'; status.textContent = 'Sending…';
-        fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
-          .then(function (r) { return r.json().catch(function () { return {}; }).then(function (b) { if (!r.ok || b.success === 'false' || b.success === false) throw new Error(r.status); }); })
-          .then(function () { done('Received. We will call you within one business day.'); })
-          .catch(function () {
-            btn.disabled = false; status.className = 'letter__status is-error';
-            status.innerHTML = 'The letter did not send. <a href="mailto:' + UC.site.contact.email + '?subject=' + encodeURIComponent(subject0) + '&body=' + encodeURIComponent(data.letter) + '">Send it from your email app</a>, or call ' + UC.site.contact.phone + '.';
-          });
+        fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+          .then(function (r) { if (!r.ok) throw new Error(r.status); done('Received. We will call you within one business day.'); })
+          .catch(function () { btn.disabled = false; status.className = 'letter__status is-error'; status.textContent = 'The letter did not send. Call ' + UC.site.contact.phone + ' or try again.'; });
       } else {
         var subject = form.dataset.subject || 'Private enquiry';
         location.href = 'mailto:' + UC.site.contact.email + '?subject=' + encodeURIComponent(subject + ' — ' + (data.name || '')) + '&body=' + encodeURIComponent(data.letter);

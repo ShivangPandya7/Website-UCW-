@@ -29,13 +29,14 @@
     return fetch(url, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.text() : null; }).then(applySheet).catch(function () {});
   }
   var timeout = new Promise(function (res) { setTimeout(res, 2500); });
-  var load = location.protocol === 'file:' ? Promise.resolve() : Promise.all([get('site'), get('funds'), get('insights'), get('team'), get('images')]).then(function (r) {
-    var site = r[0], funds = r[1], insights = r[2], team = r[3], images = r[4];
-    if (site) { merge(UC.site.contact, site.contact); if (site.event) UC.site.event = merge(UC.site.event || {}, site.event); UC.site.stats = site.stats; UC.site.sebi = site.sebiRegistration; if (site.formEndpoint) UC.site.formEndpoint = site.formEndpoint; }
+  var load = location.protocol === 'file:' ? Promise.resolve() : Promise.all([get('site'), get('funds'), get('insights'), get('team'), get('images'), get('documents')]).then(function (r) {
+    var site = r[0], funds = r[1], insights = r[2], team = r[3], images = r[4], documents = r[5];
+    if (site) { merge(UC.site.contact, site.contact); if (site.event) UC.site.event = merge(UC.site.event || {}, site.event); UC.site.stats = site.stats; UC.site.sebi = site.sebiRegistration; if (site.formEndpoint) UC.site.formEndpoint = site.formEndpoint; if (site.leadEndpoint) UC.site.leadEndpoint = site.leadEndpoint; }
     if (funds && funds.asOf) UC.funds.asOf = funds.asOf;
     UC.content = UC.content || {};
     if (insights && insights.items) UC.content.insights = insights.items;
     if (team && team.members) UC.content.team = team.members;
+    if (documents && documents.items) UC.content.documents = documents.items;
     if (site && site.compliance) UC.site.compliance = site.compliance;
     if (images && images.slots) Object.keys(images.slots).forEach(function (k) {
       var p = images.slots[k]; if (p && UC.images[k]) { UC.images[k].src = p.replace(/^\//, ''); UC.images[k].own = true; }

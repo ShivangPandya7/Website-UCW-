@@ -54,7 +54,8 @@ collections:
               - {label: "Name", name: name, widget: string, required: false}
               - {label: "Email", name: email, widget: string, required: false}
               - {label: "Phone", name: phone, widget: string, required: false}
-          - {label: "Enquiry handling", name: formEndpoint, widget: select, options: [{label: "Email to yash@uppercrustwealth.com", value: "https://formsubmit.co/ajax/yash@uppercrustwealth.com"}, {label: "Netlify Forms (Netlify hosting only)", value: "netlify"}], default: "https://formsubmit.co/ajax/yash@uppercrustwealth.com", hint: "Where the enquiry letter goes. Email sends it straight to Yash's inbox; Netlify Forms only works when the site is hosted on Netlify."}
+          - {label: "Lead & enquiry endpoint (Google Apps Script web-app URL — see backend/apps-script.gs)", name: leadEndpoint, widget: string, required: false}
+          - {label: "Enquiry handling", name: formEndpoint, widget: select, options: ["netlify"], default: "netlify", hint: "netlify = enquiries arrive in the Netlify dashboard and by email"}
 
       - label: "Insights (research notes)"
         name: insights
@@ -65,11 +66,26 @@ collections:
             widget: list
             fields:
               - {label: "Kind", name: kind, widget: select, options: ["Quarterly letter", "Sector report", "Market outlook", "Investment note"]}
+              - {label: "Short id (used in links, e.g. defence)", name: id, widget: string}
               - {label: "Title", name: title, widget: string}
               - {label: "Summary", name: summary, widget: text}
+              - {label: "Full note (blank line between paragraphs)", name: body, widget: text, required: false}
               - {label: "Read time", name: readTime, widget: string, required: false}
               - {label: "Photo", name: image, widget: select, options: ["insightCapex", "insightDefence", "insightRates"], required: false}
               - {label: "PDF (optional — otherwise visitors request it by email)", name: file, widget: file, required: false}
+
+      - label: "Documents (brochure, fund details)"
+        name: documents
+        file: content/documents.json
+        fields:
+          - label: "Documents"
+            name: items
+            widget: list
+            fields:
+              - {label: "Kind", name: kind, widget: select, options: ["Brochure", "Fund details", "Regulatory", "Presentation"]}
+              - {label: "Title", name: title, widget: string}
+              - {label: "Summary", name: summary, widget: text}
+              - {label: "File (PDF) — visitors download it directly; empty shows 'Available shortly'", name: file, widget: file, required: false}
 
       - label: "Leadership"
         name: team
@@ -94,7 +110,7 @@ collections:
             widget: object
             fields:
           - {label: "Mumbai’s high-rises rising in layers beside the water at night", name: "homeHero", widget: image, required: false, hint: "Default file name: home-hero.jpg"}
-          - {label: "An Indian family of three generations in conversation with their wealth manager", name: "homeIntro", widget: image, required: false, hint: "Default file name: home-intro.jpg"}
+          - {label: "A father and son silhouetted against a golden sunset — the bond a plan is built to protect", name: "homeIntro", widget: image, required: false, hint: "Default file name: home-intro-photo.jpg"}
           - {label: "A quiet boardroom set for a private meeting", name: "practiceAdvisory", widget: image, required: false, hint: "Default file name: practice-advisory.jpg"}
           - {label: "The UpperCrust office, with the bronze bull in a gold-lit display case", name: "practiceAM", widget: image, required: false, hint: "Default file name: practice-asset-management.jpg"}
           - {label: "A young family holding their baby", name: "practiceInsurance", widget: image, required: false, hint: "Default file name: practice-insurance.jpg"}
@@ -122,3 +138,4 @@ collections:
           - {label: "A father’s hand holding his child’s — the bond that carries a family forward", name: "storiesSuccession", widget: image, required: false, hint: "Default file name: stories-succession.jpg"}
           - {label: "The Dubai skyline, where the client lives", name: "storiesNRI", widget: image, required: false, hint: "Default file name: stories-nri.jpg"}
           - {label: "A calm sea meeting the shore — staying steady through the storm", name: "storiesPreservation", widget: image, required: false, hint: "Default file name: stories-preservation.jpg"}
+          - {label: "A calm, light-filled private study", name: "resourcesHero", widget: image, required: false, hint: "Default file name: resources-hero.jpg"}
