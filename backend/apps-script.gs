@@ -10,7 +10,7 @@
  *  5. Paste it in /admin → Contact, event and firm details → "Lead & enquiry endpoint". Done.
  * Optional: set NOTIFY_EMAIL below to receive an email for every new lead.
  */
-var NOTIFY_EMAIL = 'yash@uppercrustwealth.com';   // an email for every new lead; leave '' to switch it off
+var NOTIFY_EMAIL = 'social@uppercrustwealth.com';   // an email for every new lead; leave '' to switch it off
 
 function doPost(e) {
   var data = {};

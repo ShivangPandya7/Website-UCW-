@@ -160,7 +160,7 @@ Notes come from /admin → Insights; attach a PDF to a note to make it downloada
 
 ## Downloads and enquiries into Google Sheets
 Every document download (name, mobile, email, which document) and every enquiry letter is sent to a Google Apps Script
-web app that writes it into a Google Sheet and emails yash@uppercrustwealth.com.
+web app that writes it into a Google Sheet and emails social@uppercrustwealth.com.
 1. In the Sheet: Extensions, Apps Script, paste `backend/apps-script.gs`, Save.
 2. Deploy, New deployment, Web app. Execute as: Me. Who has access: Anyone. Deploy and approve the permissions.
 3. Copy the web app URL (https://script.google.com/macros/s/.../exec).

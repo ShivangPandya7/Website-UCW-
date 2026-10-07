@@ -28,7 +28,7 @@
           '<p>' + (d.lede || 'We will build the plan around it.') + '</p>' +
           '<dl class="letter-desk">' +
             '<div><dt>' + (d.desk || 'Direct line') + '</dt><dd><a href="tel:' + c.tel + '">' + c.phone + '</a></dd></div>' +
-            '<div><dt>Email</dt><dd><a href="mailto:' + c.email + '">' + c.email + '</a></dd></div>' +
+            '<div><dt>Email</dt><dd><a href="mailto:' + (c.leadEmail || c.email) + '">' + (c.leadEmail || c.email) + '</a></dd></div>' +
             '<div><dt>' + (d.response ? 'Response' : 'Office') + '</dt><dd>' + (d.response || c.address) + '</dd></div>' +
           '</dl>' +
         '</div>' +

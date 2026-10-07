@@ -61,7 +61,7 @@
           .catch(function () { btn.disabled = false; status.className = 'letter__status is-error'; status.textContent = 'The letter did not send. Call ' + UC.site.contact.phone + ' or try again.'; });
       } else {
         var subject = form.dataset.subject || 'Private enquiry';
-        location.href = 'mailto:' + UC.site.contact.email + '?subject=' + encodeURIComponent(subject + ' — ' + (data.name || '')) + '&body=' + encodeURIComponent(data.letter);
+        location.href = 'mailto:' + (UC.site.contact.leadEmail || UC.site.contact.email) + '?subject=' + encodeURIComponent(subject + ' — ' + (data.name || '')) + '&body=' + encodeURIComponent(data.letter);
         done('Your letter is open in your email app. Send it and we will reply within one business day.');
       }
     });
