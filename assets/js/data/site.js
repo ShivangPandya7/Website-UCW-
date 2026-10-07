@@ -7,8 +7,7 @@ UC.site = {
     email: 'yash@uppercrustwealth.com',
     leadEmail: 'social@uppercrustwealth.com',   // receives the enquiry letter and the document-download details
     address: '316–317 Pancham Icon, Vasna, Vadodara 390025',
-    whatsapp: 'https://wa.me/918141122322',
-    linkedin: '#'
+    linkedin: 'https://www.linkedin.com/company/uppercrust-wealth/posts/?feedView=all'
   },
   event: { name: 'Wealth Conclave ’26', short: 'Conclave ’26', date: '2026-10-10', dateLabel: '10 Oct', venue: 'Waves Club, Vadodara', url: 'https://uppercrustconclave.in' },
   // Set to your form handler URL (POST, JSON). Empty = the letter opens in the visitor's email app.

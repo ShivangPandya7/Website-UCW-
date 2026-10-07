@@ -27,7 +27,6 @@ collections:
               - {label: "Email", name: email, widget: string}
               - {label: "Email for enquiry letters and downloads (also set NOTIFY_EMAIL in the Apps Script)", name: leadEmail, widget: string, required: false}
               - {label: "Office address", name: address, widget: string}
-              - {label: "WhatsApp link", name: whatsapp, widget: string}
               - {label: "LinkedIn link", name: linkedin, widget: string}
           - label: "Event in the header (sticker hides itself after the date)"
             name: event

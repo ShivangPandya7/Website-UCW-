@@ -32,7 +32,7 @@ git push
 
 | Admin section | What it changes |
 |---|---|
-| Contact, event and firm details | phone, email, address, WhatsApp, LinkedIn, Conclave sticker, firm figures, PMS provider and SEBI number, compliance officer, performance-sheet link |
+| Contact, event and firm details | phone, email, address, LinkedIn, Conclave sticker, firm figures, PMS provider and SEBI number, compliance officer, performance-sheet link |
 | Insights | research notes on the Asset Management page |
 | Leadership | names, roles, LinkedIn links, portraits |
 | Photographs | upload a photo into any place on the site |
