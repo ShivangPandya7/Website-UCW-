@@ -69,3 +69,13 @@
 .dlmodal .gate__fine{text-align:center}
 body.dl-open{overflow:hidden}
 .rdoc__dl{border:0;cursor:pointer}
+.dlmodal__opt{margin:8px 0 -2px;padding-top:14px;border-top:1px solid rgba(245,239,227,.12);font-family:var(--f-ui);font-size:12.5px;letter-spacing:.04em;color:rgba(245,239,227,.85)}
+.dlmodal__opt span{margin-left:6px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(199,168,104,.9)}
+.dlmodal select{width:100%;font-family:var(--f-text);font-size:17px;color:var(--ivory);background:rgba(245,239,227,.05) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23C7A868' stroke-width='1.5'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 16px center;border:1px solid rgba(245,239,227,.16);border-radius:12px;padding:13px 40px 13px 16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.dlmodal select:focus{outline:none;border-color:#C7A868}
+.dlmodal select option{color:#211D18;background:#F2E8D3}
+.dlmodal .gate__form label.dlmodal__check{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;margin-top:6px;text-transform:none;letter-spacing:0;font-family:var(--f-text);font-size:14.5px;line-height:1.5;color:rgba(245,239,227,.8);cursor:pointer}
+.dlmodal__check input{appearance:none;-webkit-appearance:none;width:22px;height:22px;margin-top:1px;border-radius:6px;border:1.5px solid rgba(199,168,104,.7);background:transparent;display:grid;place-items:center;cursor:pointer;padding:0}
+.dlmodal__check input:checked{background:#C7A868;border-color:#C7A868}
+.dlmodal__check input:checked::after{content:"";width:6px;height:11px;border:solid #14110D;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.dlmodal__check input:focus-visible{outline:2px solid #C7A868;outline-offset:2px}

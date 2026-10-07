@@ -17,8 +17,8 @@ function doPost(e) {
   try { data = JSON.parse(e.postData.contents || '{}'); } catch (err) { data = { raw: e.postData && e.postData.contents }; }
   var type = data.type || 'enquiry';
   if (type === 'download') {
-    var dsheet = sheetFor_('Downloads', ['Received', 'Name', 'Mobile', 'Email', 'Document', 'Page']);
-    var drow = [new Date(), data.name || '', data.phone || '', data.email || '', data.document || '', data.page || ''];
+    var dsheet = sheetFor_('Downloads', ['Received', 'Name', 'Mobile', 'Email', 'Document', 'Interest', 'Investable amount', 'Based in', 'Follow-up', 'News and updates', 'Page']);
+    var drow = [new Date(), data.name || '', data.phone || '', data.email || '', data.document || '', data.interest || '', data.amount || '', data.based || '', data.followup || '', data.subscribe || 'No', data.page || ''];
     dsheet.appendRow(drow);
     notify_('download of ' + (data.document || 'a document'), data.name, drow);
     return ok_();

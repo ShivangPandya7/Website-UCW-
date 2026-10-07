@@ -70,7 +70,7 @@
     document.body.appendChild(a); a.click(); a.remove();
   }
   function logAndGet(d, who) {
-    post({ type: 'download', document: d.title, file: d.file, name: who.name, phone: who.phone, email: who.email, page: location.pathname, at: new Date().toISOString() });
+    post({ type: 'download', document: d.title, file: d.file, name: who.name, phone: who.phone, email: who.email, interest: who.interest || '', amount: who.amount || '', based: who.based || '', followup: who.followup || '', subscribe: who.subscribe ? 'Yes' : 'No', page: location.pathname, at: new Date().toISOString() });
     startDownload(d.file);
   }
 
@@ -81,22 +81,29 @@
 
     var modal = document.createElement('div');
     modal.className = 'dlmodal'; modal.hidden = true; modal.setAttribute('role', 'dialog'); modal.setAttribute('aria-modal', 'true'); modal.setAttribute('aria-labelledby', 'dl-title');
+    function opts(list) { return list.map(function (o) { return '<option value="' + o + '">' + o + '</option>'; }).join(''); }
     modal.innerHTML = '<div class="dlmodal__card"><button type="button" class="dlmodal__x" aria-label="Close">\u00d7</button>' +
-      '<p class="dlmodal__kind">Free download</p><h2 id="dl-title">Where should we send it?</h2>' +
+      '<p class="dlmodal__kind">Free download</p><h2 id="dl-title">Before your download</h2>' +
       '<p class="dlmodal__doc" data-dl-doc></p>' +
       '<form class="gate__form" novalidate>' +
         '<label>Full name<input name="name" autocomplete="name" required></label>' +
         '<label>Mobile number<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91" required></label>' +
         '<label>Email address<input name="email" type="email" autocomplete="email" required></label>' +
+        '<p class="dlmodal__opt">A little about you <span>optional</span></p>' +
+        '<label>What brings you here?<select name="interest"><option value="">Choose one</option>' + opts(['Investing a lump sum', 'Planning for retirement', 'Reviewing my existing portfolio', 'Comparing PMS options', 'Succession and legacy planning', 'Just exploring']) + '</select></label>' +
+        '<label>Approximate investable amount<select name="amount"><option value="">Choose one</option>' + opts(['Under \u20b950 lakh', '\u20b950 lakh to \u20b91 crore', '\u20b91 crore to \u20b95 crore', '\u20b95 crore and above', 'Prefer not to say']) + '</select></label>' +
+        '<label>I am based in<select name="based"><option value="">Choose one</option>' + opts(['Gujarat', 'Mumbai or Maharashtra', 'Elsewhere in India', 'UAE', 'Elsewhere outside India']) + '</select></label>' +
+        '<label>How may we follow up?<select name="followup"><option value="">Choose one</option>' + opts(['Email only', 'A call is fine', 'Please do not contact me']) + '</select></label>' +
+        '<label class="dlmodal__check"><input type="checkbox" name="subscribe"><span>Yes, keep me informed. I agree to receive UpperCrust\u2019s news articles, market notes and further information by email. I can unsubscribe at any time.</span></label>' +
         '<button class="btn" type="submit">Download</button><p class="gate__status" data-dl-status role="status" aria-live="polite"></p>' +
-      '</form><p class="gate__fine">Free, and private \u2014 we never share your details.</p></div>';
+      '</form><p class="gate__fine">We never share your contact details with anyone, and we will not call you unless you have asked us to.</p></div>';
     document.body.appendChild(modal);
     var form = modal.querySelector('form'), status = modal.querySelector('[data-dl-status]'), pending = null, opener = null;
 
     function open(d, btn) {
       pending = d; opener = btn; status.textContent = ''; status.className = 'gate__status';
       modal.querySelector('[data-dl-doc]').textContent = d.title;
-      var me = saved(); if (me) { form.name.value = me.name || ''; form.phone.value = me.phone || ''; form.email.value = me.email || ''; }
+      var me = saved(); if (me) { ['name', 'phone', 'email', 'interest', 'amount', 'based', 'followup'].forEach(function (k) { if (form[k] && me[k]) form[k].value = me[k]; }); form.subscribe.checked = !!me.subscribe; }
       modal.hidden = false; document.body.classList.add('dl-open'); setTimeout(function () { (form.name.value ? form.phone : form.name).focus(); }, 60);
     }
     function close() { modal.hidden = true; document.body.classList.remove('dl-open'); if (opener) opener.focus(); }
@@ -115,7 +122,7 @@
       var name = form.name.value.trim(), phone = form.phone.value.trim(), email = form.email.value.trim();
       var ok = name.length > 1 && /^[+\d][\d\s-]{8,}$/.test(phone) && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
       if (!ok) { status.textContent = 'Please add your name, a valid mobile number and email address.'; status.className = 'gate__status is-error'; return; }
-      var who = { name: name, phone: phone, email: email };
+      var who = { name: name, phone: phone, email: email, interest: form.interest.value, amount: form.amount.value, based: form.based.value, followup: form.followup.value, subscribe: form.subscribe.checked };
       remember(who);
       logAndGet(pending, who);              // download starts straight away, inside the click
       document.dispatchEvent(new CustomEvent('uc:identified', { detail: who }));

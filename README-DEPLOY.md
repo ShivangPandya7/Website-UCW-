@@ -167,3 +167,5 @@ web app that writes it into a Google Sheet and emails social@uppercrustwealth.co
 4. Paste it into `content/site.json` as the value of `leadEndpoint` (or /admin, Contact, event and firm details), then commit.
 Until step 4 is done, downloads still work and letters open the visitor's email app.
 If you change the script later, use Deploy, Manage deployments, Edit, New version. The URL stays the same.
+The Downloads sheet has columns for the optional answers and for the news-and-updates consent. If you created the Downloads tab
+with an earlier version of the script, delete that tab once; the script re-creates it with the new columns.
