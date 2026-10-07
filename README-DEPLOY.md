@@ -175,3 +175,13 @@ Create the Google Sheet and the Apps Script while signed in as **social@uppercru
 account, the script runs as that account, and the notification email (`NOTIFY_EMAIL`) goes to the same inbox.
 Enquiry letters and downloads are only ever recorded this way: the letter no longer opens the visitor's email app. If the
 endpoint is not set (or unreachable) the letter shows "could not be sent just now" with the phone number, so set `leadEndpoint` before launch.
+
+## Releasing a change (so nobody sees an old copy)
+Browsers and hosts keep site files for a while (your `netlify.toml` allows 7 days for `/assets`). Before you publish any change
+under `assets/` or to a page, run once:
+
+    python tools/bump_version.py
+
+It stamps every stylesheet and script with a new version, so the next visit always fetches the fresh files.
+Content edited in /admin (`content/*.json`) is fetched fresh every time and needs nothing.
+
