@@ -119,7 +119,7 @@
       remember(who);
       logAndGet(pending, who);              // download starts straight away, inside the click
       document.dispatchEvent(new CustomEvent('uc:identified', { detail: who }));
-      status.textContent = 'Thank you, ' + name.split(' ')[0] + '. Your download has started.'; status.className = 'gate__status';
+      status.textContent = 'Our team will reach out to you soon.'; status.className = 'gate__status';
       setTimeout(close, 1400);
     });
   });

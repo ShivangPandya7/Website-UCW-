@@ -50,7 +50,7 @@
       btn.disabled = true; status.className = 'letter__status'; status.textContent = 'Sending…';
       var lead = Object.assign({ type: 'enquiry', page: location.pathname }, data);
       fetch(url, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(lead) })
-        .then(function () { done('Received. We will call you within one business day.'); }, fail);
+        .then(function () { done('Our team will reach out to you soon.'); }, fail);
     });
     function done(msg) { form.classList.add('is-sent'); status.className = 'letter__status'; status.textContent = msg; btn.textContent = 'Letter written'; btn.disabled = true; }
   });
