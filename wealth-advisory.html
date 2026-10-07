@@ -52,10 +52,16 @@
     <div class="wrap">
 <div class="page sec-head"><p class="marg">SIP and SWP</p><div class="main intro"><h2 class="t-h2">Two directions of the same discipline.</h2></div></div><div class="page"><div class="main--wide"><figure class="flow" aria-label="Money flows in through a SIP, accumulates, then flows out through a SWP">
   <svg class="flow__wide" viewBox="0 0 900 220" role="img" aria-label="Accumulation, then distribution">
-    <g class="flow__in"><rect x="30" y="96" width="14" height="28"/><rect x="66" y="96" width="14" height="28"/><rect x="102" y="96" width="14" height="28"/><rect x="138" y="96" width="14" height="28"/><rect x="174" y="96" width="14" height="28"/><rect x="210" y="96" width="14" height="28"/><rect x="246" y="96" width="14" height="28"/><rect x="282" y="96" width="14" height="28"/></g>
+    <defs>
+      <linearGradient id="flowFadeIn" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="340" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".09" stop-color="#fff" stop-opacity="0"/><stop offset=".32" stop-color="#fff"/><stop offset=".66" stop-color="#fff"/><stop offset=".92" stop-color="#fff" stop-opacity="0"/></linearGradient>
+      <linearGradient id="flowFadeOut" gradientUnits="userSpaceOnUse" x1="560" y1="0" x2="900" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".1" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff"/><stop offset=".7" stop-color="#fff"/><stop offset=".95" stop-color="#fff" stop-opacity="0"/></linearGradient>
+      <mask id="flowMaskIn" maskUnits="userSpaceOnUse" x="-20" y="0" width="360" height="220"><rect x="-20" y="0" width="360" height="220" fill="url(#flowFadeIn)"/></mask>
+      <mask id="flowMaskOut" maskUnits="userSpaceOnUse" x="560" y="0" width="360" height="220"><rect x="560" y="0" width="360" height="220" fill="url(#flowFadeOut)"/></mask>
+    </defs>
+    <g mask="url(#flowMaskIn)"><g class="flow__in"><rect x="-6" y="96" width="14" height="28"/><rect x="30" y="96" width="14" height="28"/><rect x="66" y="96" width="14" height="28"/><rect x="102" y="96" width="14" height="28"/><rect x="138" y="96" width="14" height="28"/><rect x="174" y="96" width="14" height="28"/><rect x="210" y="96" width="14" height="28"/><rect x="246" y="96" width="14" height="28"/><rect x="282" y="96" width="14" height="28"/></g></g>
     <path class="flow__vessel" d="M340,40 L340,180 Q340,196 356,196 L544,196 Q560,196 560,180 L560,40"/>
     <rect class="flow__level" x="341" y="80" width="218" height="115"/>
-    <g class="flow__out"><rect x="600" y="104" width="10" height="20"/><rect x="636" y="104" width="10" height="20"/><rect x="672" y="104" width="10" height="20"/><rect x="708" y="104" width="10" height="20"/><rect x="744" y="104" width="10" height="20"/><rect x="780" y="104" width="10" height="20"/><rect x="816" y="104" width="10" height="20"/><rect x="852" y="104" width="10" height="20"/></g>
+    <g mask="url(#flowMaskOut)"><g class="flow__out"><rect x="564" y="104" width="10" height="20"/><rect x="600" y="104" width="10" height="20"/><rect x="636" y="104" width="10" height="20"/><rect x="672" y="104" width="10" height="20"/><rect x="708" y="104" width="10" height="20"/><rect x="744" y="104" width="10" height="20"/><rect x="780" y="104" width="10" height="20"/><rect x="816" y="104" width="10" height="20"/><rect x="852" y="104" width="10" height="20"/></g></g>
     <text x="30" y="160">Regular investments in</text>
     <text x="450" y="30" text-anchor="middle">The goal, funded</text>
     <text x="870" y="160" text-anchor="end">Planned withdrawals out</text>

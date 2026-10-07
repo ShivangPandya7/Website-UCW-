@@ -32,7 +32,6 @@
   .flow__out rect{animation-duration:2.4s!important;animation-iteration-count:infinite!important}
   .flow__level{animation-duration:6.4s!important;animation-iteration-count:infinite!important}
 }
-.flow:hover .flow__in rect,.flow:hover .flow__out rect{animation-play-state:paused}
 
 /* SIP / SWP on phones: a tall diagram — money drops in from above, the goal fills, withdrawals flow out below */
 .flow__tall{display:none}
