@@ -4,7 +4,7 @@ UC.site = {
   contact: {
     phone: '+91 81411 22322',
     tel: '+918141122322',
-    email: 'yash@uppercrustwealth.com',
+    email: 'social@uppercrustwealth.com',
     leadEmail: 'social@uppercrustwealth.com',   // receives the enquiry letter and the document-download details
     address: '316–317 Pancham Icon, Vasna, Vadodara 390025',
     linkedin: 'https://www.linkedin.com/company/uppercrust-wealth/posts/?feedView=all'

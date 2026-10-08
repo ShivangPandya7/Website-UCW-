@@ -59,13 +59,13 @@
           '<a class="nav-link" href="pms.html#insights">Insights</a>' +
           '<a class="nav-link nav-link--lock" href="resources.html"' + (page === 'resources' ? ' aria-current="page"' : '') + '>Resources <svg class="lock-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5C6.5 4.5 9.5 4.5 12 6c2.5-1.5 5.5-1.5 8-.5v13c-2.5-1-5.5-1-8 .5-2.5-1.5-5.5-1.5-8-.5z"/><path d="M12 6v13"/></svg></a>' +
         '</nav>' +
-        '<a class="btn site-header__cta" href="#contact">Book a discovery call</a>' +
+        '<a class="btn site-header__cta" href="#contact">Schedule a discovery call</a>' +
         '<button class="site-header__toggle" aria-expanded="false" aria-controls="siteMenu"><span class="label">Menu</span><span class="bars" aria-hidden="true"></span></button>' +
       '</div></header>' +
       '<div class="menu" id="siteMenu" aria-label="Site menu">' +
         '<div class="menu__group"><p class="menu__label">The practice</p>' + menuLinks(s.practice) + '</div>' +
         '<div class="menu__group"><p class="menu__label">Our funds</p>' + menuLinks(s.funds) + '</div>' +
-        '<div class="menu__group"><a href="' + s.event.url + '" target="_blank" rel="noopener">' + s.event.name + ' <small>' + s.event.dateLabel + '</small></a><a href="client-stories.html">Client stories</a><a href="pms.html#insights">Insights</a><a href="resources.html">Resources <small>Library</small></a><a href="#contact">Book a discovery call</a></div>' +
+        '<div class="menu__group"><a href="' + s.event.url + '" target="_blank" rel="noopener">' + s.event.name + ' <small>' + s.event.dateLabel + '</small></a><a href="client-stories.html">Client stories</a><a href="pms.html#insights">Insights</a><a href="resources.html">Resources <small>Library</small></a><a href="#contact">Schedule a discovery call</a></div>' +
         '<div class="menu__foot"><span><a href="tel:' + s.contact.tel + '">' + s.contact.phone + '</a> · <a href="mailto:' + s.contact.email + '">' + s.contact.email + '</a></span></div>' +
       '</div>';
   }

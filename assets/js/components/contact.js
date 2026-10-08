@@ -1,6 +1,6 @@
 /* Contact section — the enquiry letter, rendered once and configured per page.
    <div data-component="contact" data-title="..." data-lede="..." data-subject="..."
-        data-extra="assets,fund,referred" data-desk="PMS advisory desk" data-response="Within one business day"
+        data-extra="assets,fund,referred" data-desk="PMS advisory desk" data-response="Our team will reach out to you soon"
         data-topic="investing through PMS" data-fund="UCWF"></div> */
 (function () {
   var UC = window.UC;
@@ -42,8 +42,8 @@
             '<label><input type="radio" name="prefer" value="a call" checked><span>a call</span></label><span class="sep">,</span>' +
             '<label><input type="radio" name="prefer" value="a meeting in person"><span>a meeting in person</span></label><span class="sep">or</span>' +
             '<label><input type="radio" name="prefer" value="a video call"><span>a video call</span></label>.</fieldset>' +
-          '<div class="letter__sign"><button class="btn" type="submit">' + (d.button || 'Send my letter') + '</button>' +
-            '<p class="letter__status" role="status" aria-live="polite">' + (d.response ? d.response + '.' : 'We reply within one business day.') + '</p></div>' +
+          '<div class="letter__sign"><button class="btn" type="submit">' + (d.button || 'Schedule a discovery call') + '</button>' +
+            '<p class="letter__status" role="status" aria-live="polite">' + 'Our team will reach out to you soon.' + '</p></div>' +
                   '</form>' +
       '</div></section>';
   });
