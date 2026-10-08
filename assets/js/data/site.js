@@ -16,9 +16,7 @@ UC.site = {
   leadEndpoint: 'https://script.google.com/macros/s/AKfycbybCYKaRNv1mpsWr0qjbabmLR5MscdtRM0mNtGcMqcjsee3es_Vf-rpMCKDvU4_TiDy/exec',
   practice: [
     { name: 'Wealth Advisory', href: 'wealth-advisory.html', page: 'advisory', note: 'Mutual funds, PMS, AIF and bonds, chosen for your goal rather than from a shelf.' },
-    { name: 'Asset Management', href: 'pms.html', page: 'pms', note: 'UCWF, UCGF and UCPF — our three portfolio management strategies.' },
-    { name: 'Insurance Broking', href: 'insurance.html', page: 'insurance', note: 'Protection reviewed alongside the portfolio.', soon: true },
-    { name: 'Equity Broking', href: 'broking.html', page: 'broking', note: 'Direct equity with the research desk behind it.', soon: true }
+    { name: 'Asset Management', href: 'pms.html', page: 'pms', note: 'UCWF, UCGF and UCPF — our three portfolio management strategies.' }
   ],
   funds: [
     { name: 'UpperCrust Wealth Fund', code: 'UCWF', href: 'pms.html#ucwf', page: 'pms-ucwf', note: 'Core equity. Diversified and quality-first.', tag: 'Core equity' },

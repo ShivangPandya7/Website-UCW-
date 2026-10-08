@@ -3,7 +3,7 @@
   var UC = window.UC;
   UC.register('footer', '[data-component="footer"]', function (host) {
     var s = UC.site, c = s.contact;
-    var practice = s.practice.map(function (p) { return '<a href="' + p.href + '">' + p.name + (p.soon ? '<small>Coming soon</small>' : '') + '</a>'; }).join('');
+    var practice = s.practice.map(function (p) { return '<a href="' + p.href + '">' + p.name + '</a>'; }).join('');
     var funds = s.funds.map(function (f) { return '<a href="' + f.href + '">' + f.name + '</a>'; }).join('');
     var year = new Date().getFullYear();
     host.outerHTML =
