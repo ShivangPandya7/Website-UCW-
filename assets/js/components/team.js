@@ -4,7 +4,7 @@
     var t = UC.content && UC.content.team; if (!t || !t.length) return;
     host.innerHTML = t.map(function (m, i) {
       var key = 'cmsPortrait' + i;
-      if (m.photo) UC.images[key] = { src: m.photo.replace(/^\//, ''), own: true, alt: m.name, pos: '50% 25%' };
+      if (m.photo) UC.images[key] = { src: m.photo.replace(/^\//, ''), own: true, alt: m.name, pos: m.photoPos || '50% 25%' };
       return '<article class="leader"><figure class="ph portrait"' + (m.photo ? ' data-img="' + key + '"' : '') + ' data-w="700"><span aria-hidden="true">' + m.name.charAt(0) + '</span></figure>' +
         '<h3>' + m.name + '</h3><p class="person__role">' + m.role + '</p>' +
         '<a class="link leader__in" href="' + (m.linkedin || ('https://www.linkedin.com/search/results/people/?keywords=' + encodeURIComponent(m.name + ' UpperCrust'))) + '" target="_blank" rel="noopener">LinkedIn</a></article>';
