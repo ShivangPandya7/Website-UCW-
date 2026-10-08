@@ -55,6 +55,6 @@ UC.ownPhotos = [
     // Leadership — initials show until a portrait is added
     portraitDurgesh:    s('durgesh-pandya.jpg', 'Durgesh Pandya', null, '50% 25%'),
     portraitYash:       s('yash-joshi.jpg', 'Yash Joshi', null, '50% 25%'),
-    portraitManish:     s('manish-shah.jpg', 'Manish Shah', null, '50% 25%')
+    portraitManish:     s('manish-shah-2.jpg', 'Manish Shah', null, '50% 0%')
   };
 })();
