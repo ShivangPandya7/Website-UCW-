@@ -53,8 +53,8 @@ UC.ownPhotos = [
     storiesPreservation: s('stories-preservation.jpg', 'A calm sea meeting the shore — staying steady through the storm', 'photo-1507525428034-b723cf961d3e'),
     resourcesHero:      s('resources-hero.jpg', 'A calm, light-filled private study', 'photo-1600607687939-ce8a6c25118c'),
     // Leadership — initials show until a portrait is added
-    portraitDurgesh:    s('durgesh-pandya.jpg', 'Durgesh Pandya', null, '50% 25%'),
-    portraitYash:       s('yash-joshi.jpg', 'Yash Joshi', null, '50% 25%'),
-    portraitManish:     s('manish-shah-2.jpg', 'Manish Shah', null, '50% 0%')
+    portraitDurgesh:    s('durgesh-pandya-2.jpg', 'Durgesh Pandya', null, '50% 50%'),
+    portraitYash:       s('yash-joshi-2.jpg', 'Yash Joshi', null, '50% 50%'),
+    portraitManish:     s('manish-shah-3.jpg', 'Manish Shah', null, '50% 50%')
   };
 })();

@@ -4,24 +4,25 @@
       "name": "Durgesh Pandya",
       "role": "Chairman and CEO",
       "bio": "Sets firm-wide strategy and leads the final capital-allocation calls across every mandate.",
-      "photo": "assets/img/photos/durgesh-pandya.jpg",
+      "photo": "assets/img/photos/durgesh-pandya-2.jpg",
       "linkedin": "https://www.linkedin.com/in/durgesh-pandya-08977697/",
-      "photoPos": "44% 6%"
+      "photoPos": "50% 50%"
     },
     {
       "name": "Manish Shah",
       "role": "Executive Director",
       "bio": "Leads strategic direction and the firm’s key institutional relationships.",
-      "photo": "assets/img/photos/manish-shah-2.jpg",
+      "photo": "assets/img/photos/manish-shah-3.jpg",
       "linkedin": "https://www.linkedin.com/in/mhshah273/",
-      "photoPos": "50% 0%"
+      "photoPos": "50% 50%"
     },
     {
       "name": "Yash Joshi",
       "role": "Executive Director",
       "bio": "Oversees client advisory and firm operations across the portfolio management business.",
-      "photo": "assets/img/photos/yash-joshi.jpg",
-      "linkedin": "https://www.linkedin.com/in/yash-joshi-cfp/"
+      "photo": "assets/img/photos/yash-joshi-2.jpg",
+      "linkedin": "https://www.linkedin.com/in/yash-joshi-cfp/",
+      "photoPos": "50% 50%"
     }
   ]
 }
