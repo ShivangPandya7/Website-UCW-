@@ -80,7 +80,7 @@
 .portrait > span{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-display);font-size:clamp(90px,10vw,150px);color:rgba(33,29,24,.18);z-index:0}
 .portrait.is-missing::before{content:none}
 .portrait.is-loaded > span{display:none}
-@media (max-width:900px){.leaders{grid-template-columns:1fr}.portrait{aspect-ratio:16 / 11}}
+@media (max-width:900px){.leaders{grid-template-columns:1fr;row-gap:clamp(40px,8vw,64px)}.leader{max-width:460px}.portrait{aspect-ratio:4 / 5}}
 
 /* WHERE WE ARE — gold dot map */
 .where{background:radial-gradient(70% 90% at 75% 40%,rgba(199,168,104,.12),transparent 60%),var(--ink);color:var(--ivory);padding-block:var(--sec-y);overflow:hidden}
